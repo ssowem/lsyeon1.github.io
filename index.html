@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<style>
+*{
+    margin: 0 auto;
+    list-style: none;
+}
+
+ul,li {margin:0; padding:0;}
+
+
+.wrap {
+    max-width: 1920px;
+    height: auto;
+}
+.main { 
+    background: url(image/sunset.jpg) no-repeat center fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+.main_content{
+    padding-top: 200px;
+    margin: 0 60px;
+    height: 670px;
+}
+
+.main_content .left{
+    float: left;
+    width: 50%;
+    height: 500px;
+}
+
+.profile_inner{
+    position: relative;
+}
+
+.profile_inner .profile{
+    position: absolute;
+    top:100px;
+    left: 60px;
+}
+
+.mimoticon{
+    position: relative;
+    background-color: antiquewhite;
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+
+.text p{
+    font-family: 'Gowun Batang', serif;
+    text-align:center;
+    margin:0 auto;
+    font-size: 30px;
+    padding: 18px 0;
+}
+
+.mimoticon img{
+    position: absolute;
+    top:0;  /*부모요소div 왼쪽상단에 이미지 위치시키기위함*/
+    left: 0; /*부모요소div 왼쪽상단에 이미지 위치시키기위함*/
+     width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main_content .right{
+    float:left;
+    width:50%;
+    height: 500px;
+}
+
+.mainmenu_inner{
+    position: relative;
+}
+
+.mainmenu_inner .mainmenu{
+    position: absolute;
+    top: 200px;
+    right: 30px;
+    width: 174px;
+    height: 132px;
+}
+
+.mainmenu li{
+    padding: 5px;
+    color:rgb(255, 255, 255);
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing:1px;
+    text-shadow: -1px 0px rgb(0, 0, 0), 0px 1px rgb(0, 0, 0), 1px 0px rgb(0, 0, 0), 0px -1px rgb(0, 0, 0);
+    box-shadow: inset 0 -18px 0 #FF7B7B; 
+}
+
+
+/*포트폴리오*/
+.portpolio{
+    padding-top: 200px;
+    height: 100vh;
+    position: relative;
+}
+
+.portpolio_bg{
+    background: #FEE9E3;
+    height: 400px;
+    position: relative;
+}
+
+.portpolio_bg .title{
+    position: absolute;
+    top: -65px;
+    left: 116px;
+}
+
+.heading{
+    position: relative;
+    font-size: 60px;
+    color:#FF7B7B;
+    font-style: italic;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.portpolio_content{
+    display: flex;
+    margin: 0 60px;
+    height: 400px;
+    background-color: #FF7B7B;
+}
+
+.portpolio_content .pp_left{
+    margin-left: auto;
+}
+
+.portpolio_content ul{
+   
+    flex-wrap: wrap;
+    max-width: 1260px;
+    width: 100%;
+}
+
+.portpolio_content ul li{
+    background-color: bisque;
+ 
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap" rel="stylesheet">
+    <title>쏘해피</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="main">
+           <div class="main_content">
+                <div class="left">
+                    <div class="profile_inner">
+                        <div class="profile">
+                            <div class="mimoticon">
+                                <img src="image/mimoticon.png">
+                                </div>
+                                <div class="text">
+                                    <p>모두들 반가워요<br>
+                                        나는 멋진 웹퍼블을<br>
+                                        꿈꾸고 있는 이소연이야<br>
+                                    </p>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="mainmenu_inner">
+                        <ul class="mainmenu">
+                            <li>PORTPOLIO</li>
+                            <li>DAILY LIFE</li>
+                            <li>MENU 01</li>
+                        </ul>
+                    </div>
+                </div>
+           </div>
+        <div>
+
+        <div class="portpolio">
+            <div class="portpolio_bg">
+                <div class="title">
+                <h1 class="heading">PORTPOLIO</h1>
+                </div>
+                <div class="portpolio_content">
+                    <div class="pp_left">
+                        <ul>
+                            <li>PORTPOLIO</li>
+                            <li>DAILY LIFE</li>
+                            <li>MENU 01</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</body>
+</html>
