@@ -100,7 +100,7 @@ ul,li {margin:0; padding:0;}
 /*포트폴리오*/
 .portpolio{
     padding-top: 200px;
-    height: 100vh;
+    height: 400px;
     position: relative;
 }
 
@@ -125,26 +125,28 @@ ul,li {margin:0; padding:0;}
 }
 
 .portpolio_content{
-    display: flex;
     margin: 0 60px;
     height: 400px;
-    background-color: #FF7B7B;
 }
 
-.portpolio_content .pp_left{
-    margin-left: auto;
+.pp_container {
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.portpolio_content ul{
-   
-    flex-wrap: wrap;
-    max-width: 1260px;
-    width: 100%;
+.pp_container li{
+    height: 300px;
+    flex: 1;
+    padding: 20px;
+    margin-right: 60px;
+    align-self: center;
+    border: 1px solid black;
+    background-color: aliceblue;
 }
 
-.portpolio_content ul li{
-    background-color: bisque;
- 
+.pp_container li:last-child{
+    margin: 0;
 }
 </style>
 <head>
@@ -193,13 +195,11 @@ ul,li {margin:0; padding:0;}
                 <h1 class="heading">PORTPOLIO</h1>
                 </div>
                 <div class="portpolio_content">
-                    <div class="pp_left">
-                        <ul>
-                            <li>PORTPOLIO</li>
-                            <li>DAILY LIFE</li>
-                            <li>MENU 01</li>
-                        </ul>
-                    </div>
+                    <ul class="pp_container">
+                        <li>영역1</li>
+                        <li>영역1</li>
+                        <li>영역1</li>
+                    </ul>
                 </div>
             </div>
 
