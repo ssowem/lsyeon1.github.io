@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<style>
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    width: 100%;
+    height: 100%;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.wrap {
+    width: 100%;       
+    height: 100vh;
+    margin:0 auto;
+}
+/*max-width 값으로 최대 너비를 주면, 큰 해상도에서도 깨지지않음*/
+
+.header {
+    background: url(image/sunset.jpg) no-repeat center fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+.header-content {
+    width:100%;
+    max-width: 1600px;
+    margin:0 auto; /*가운데 정렬*/
+    background-color: burlywood;
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+}
+
+.header-content-inner {
+    width:100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-left {
+    width: 300px;
+    height: 300px;
+    margin-right: auto;
+    background-color: cornflowerblue;
+}
+
+.profile {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    background-color: aqua;
+    border-radius: 50%;
+}
+
+.profile img{
+    position: absolute;
+    top: 0;
+    left: 0;            /*top,left=0; 부모요소div 왼쪽상단에 이미지 위치시키기위함*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-right {
+    width: 200px;
+    height: 300px;
+    margin-left: auto;
+    background-color: darksalmon;
+}
+
+.content-right ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+}
+
+.content-right ul li{
+    padding: 10px;
+    color:rgb(255, 255, 255);
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing:1px;
+    text-shadow: -1px 0px rgb(0, 0, 0), 0px 1px rgb(0, 0, 0), 1px 0px rgb(0, 0, 0), 0px -1px rgb(0, 0, 0);
+    box-shadow: inset 0 -18px 0 #FF7B7B; 
+}
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="웹 페이지 설명">
+    <meta name="keywords" content="키워드1, 키워드2, 키워드3">
+    <title>쏘해피</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="header-content">
+                <div class="header-content-inner">
+
+                    <div class="content-left">
+                        <div class="profile">
+                            <img src="image/mimoticon.png" alt="mimoticon">
+                        </div>
+                    </div>
+
+                    <div class="content-right">
+                        <ul>
+                            <li>PORTPOLIO</li>
+                            <li>DAILY LIFE</li>
+                            <li>MY MENU</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
