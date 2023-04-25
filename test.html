@@ -54,23 +54,22 @@ table {
 }
 /*max-width 값으로 최대 너비를 주면, 큰 해상도에서도 깨지지않음*/
 
-.header {
+.main {
     background: url(image/sunset.jpg) no-repeat center fixed;
     background-size: cover;
     height: 100vh;
 }
 
-.header-content {
+.main-content {
     width:100%;
     max-width: 1600px;
     margin:0 auto; /*가운데 정렬*/
-    background-color: burlywood;
     display: flex;
     justify-content: center; /* 수평 가운데 정렬 */
     align-items: center; /* 수직 가운데 정렬 */
 }
 
-.header-content-inner {
+.main-content-inner {
     width:100%;
     height: 100vh;
     display: flex;
@@ -79,22 +78,24 @@ table {
 }
 
 .content-left {
+    display: flex;
+    flex-direction: column;
     width: 300px;
-    height: 300px;
+    height: 440px;
     margin-right: auto;
-    background-color: cornflowerblue;
 }
 
 .profile {
     position: relative;
     width: 300px;
     height: 300px;
-    overflow: hidden;
-    background-color: aqua;
+    overflow: hidden; /*이미지가 영역안에서 벗어나지않게 함*/
     border-radius: 50%;
+    background-color: #fff7f7;
+    flex: 1 1 300px;
 }
 
-.profile img{
+.profile img {
     position: absolute;
     top: 0;
     left: 0;            /*top,left=0; 부모요소div 왼쪽상단에 이미지 위치시키기위함*/
@@ -103,11 +104,28 @@ table {
     object-fit: cover;
 }
 
+.profile_text {
+    margin-top: 20px;
+    height: 120px;
+    flex: 1 1 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile_text p{
+    margin: 0;
+    text-align: center;
+    line-height: 1.5; /*줄간격*/
+    letter-spacing: 1px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 26px;
+}
+
 .content-right {
     width: 200px;
     height: 300px;
     margin-left: auto;
-    background-color: darksalmon;
 }
 
 .content-right ul {
@@ -118,35 +136,85 @@ table {
 }
 
 .content-right ul li{
-    padding: 10px;
+    padding: 12px;
     color:rgb(255, 255, 255);
     font-size: 26px;
     font-weight: 600;
-    letter-spacing:1px;
-    text-shadow: -1px 0px rgb(0, 0, 0), 0px 1px rgb(0, 0, 0), 1px 0px rgb(0, 0, 0), 0px -1px rgb(0, 0, 0);
+    letter-spacing:2px;
+    text-shadow: 2px 0px #000000, 1px 2px rgb(0, 0, 0), 0px 0px rgb(0, 0, 0), 3px 4px rgb(0, 0, 0);
     box-shadow: inset 0 -18px 0 #FF7B7B; 
 }
 
+
+.portpolio {
+    width: 100%;
+    height: 600px;
+    margin-top: 100px;
+}
+
+.portpolio-header {
+    display: flex;
+    width: 100%;
+    max-width: 1600px;
+    margin:0 auto;
+}
+
+.portpolio-header h1 {
+    font-size: 46px;
+    font-style: italic;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #FF7B7B;
+}
+
+.portpolio-content {
+    position: relative;
+    display: flex;
+    background-color: #FEE9E3;
+    width: 100%;
+    height: 500px;
+}
+
+.portpolio-content-box {
+    position: absolute;
+    width: 100%;
+    max-width: 1600px;
+    height: 300px;
+    background-color: aqua;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 </style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="웹 페이지 설명">
     <meta name="keywords" content="키워드1, 키워드2, 키워드3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
     <title>쏘해피</title>
 </head>
 <body>
     <div class="wrap">
-        <div class="header">
-            <div class="header-content">
-                <div class="header-content-inner">
-
+        <!-- 메인  -->
+        <div class="main">        
+            <div class="main-content">
+                <div class="main-content-inner">
+                    <!-- 메인컨텐츠 좌측 프로필-->
                     <div class="content-left">
                         <div class="profile">
                             <img src="image/mimoticon.png" alt="mimoticon">
                         </div>
+                        <div class="profile_text">
+                            <p>모두들 반가워요<br>
+                                나는 멋진 웹퍼블을<br>
+                                꿈꾸고 있는 이소연이야<br>
+                            </p>
+                        </div>
                     </div>
-
+                    <!-- 메인컨텐츠 우측 메뉴-->
                     <div class="content-right">
                         <ul>
                             <li>PORTPOLIO</li>
@@ -154,9 +222,22 @@ table {
                             <li>MY MENU</li>
                         </ul>
                     </div>
-
                 </div>
             </div>
         </div>
+        <!-- 포트폴리오 섹션 -->
+            <div class="portpolio">
+                <div class="portpolio-header">
+                    <h1>PORTPOLIO</h1>
+                </div>
+
+                <div class="portpolio-content">
+                    <div class="portpolio-content-box">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                </div>
+            </div>
     </div>
 </body>
