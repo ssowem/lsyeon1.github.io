@@ -81,14 +81,14 @@ table {
     display: flex;
     flex-direction: column;
     width: 300px;
-    height: 440px;
+    height: 480px;
     margin-right: auto;
 }
 
 .profile {
     position: relative;
     width: 300px;
-    height: 300px;
+    height: 480px;
     overflow: hidden; /*이미지가 영역안에서 벗어나지않게 함*/
     border-radius: 50%;
     background-color: #fff7f7;
@@ -104,22 +104,38 @@ table {
     object-fit: cover;
 }
 
-.profile_text {
+.profile_box {
     margin-top: 20px;
-    height: 120px;
     flex: 1 1 100px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.profile_text p{
+.profile_box p{
     margin: 0;
     text-align: center;
     line-height: 1.5; /*줄간격*/
     letter-spacing: 1px;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 26px;
+}
+
+.profile-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.email span{
+    font-size: 16px;
+}
+
+.git-icon i{
+    font-size: 20px;
 }
 
 .content-right {
@@ -146,20 +162,20 @@ table {
 }
 
 
-.portpolio {
+.portfolio {
     width: 100%;
     height: 600px;
     margin-top: 100px;
 }
 
-.portpolio-header {
+.portfolio-header {
     display: flex;
     width: 100%;
     max-width: 1600px;
     margin:0 auto;
 }
 
-.portpolio-header h1 {
+.portfolio-header h1 {
     font-size: 52px;
     font-style: italic;
     font-family: 'Roboto', sans-serif;
@@ -168,7 +184,7 @@ table {
     color: #FF7B7B;
 }
 
-.portpolio-content {
+.portfolio-content {
     position: relative;
     display: flex;
     background-color: #FEE9E3;
@@ -176,29 +192,23 @@ table {
     height: 500px;
 }
 
-.portpolio-content-box {
+.portfolio-content-box {
     position: absolute;
     width: 100%;
     max-width: 1600px;
-    height: 300px;
+    height: 320px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    justify-content: center;
-    flex-direction: row;
+    justify-content: space-between;
 }
 
-.box {
+.portfolio .box {
     width: 30%;
-    height: 300px;
+    height: 320px;
     border: 1px solid black;
     background-color:#ffffff;
-    margin-right: 5%;
-}
-
-.box:last-child {
-    margin: 0;
 }
 
 .gallery {
@@ -244,13 +254,7 @@ table {
     height: 458px;
 }
 
-
- #border-box {
- 
-}
-
 .gallery-box h1 {
-    font-size: 40px;
     text-align: center;
     font-size: 52px;
     font-style: italic;
@@ -268,17 +272,107 @@ table {
 }
 
 .dailylife {
-    margin-top: 100px;
+    margin-top: 142px;
     width: 100%;
-    background-color: #FF7B7B;
-    height: 700px;
+    background-color: #FFEBD6;
+    height: 100vh;
 }
+
+.dailylife-header {
+    display: flex;
+    width: 100%;
+    max-width: 1600px;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-top: 76px;
+}
+
+.dailylife-header h1 {
+    font-size: 52px;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #FF7B7B;
+}
+
+.dailylife-header p {
+    padding-top: 4px;
+    font-size: 16px;
+}
+
+.dailylife-content {
+    width: 100%;
+    max-width: 1600px;
+    height: 438px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 76px;
+}
+
+
+.dailylife-content .box {
+    width:23%;
+    height: 438px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dailylife-content .box data{
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 348px;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 348px;
+}
+
+.date-wrap {
+    display: flex;
+    justify-content:space-between
+}
+
+.date {
+    font-size: 16px;
+    margin: 12px 0;
+    color: #727272;
+}
+
+.icon {
+    color:#ffcaca;
+    margin: 12px;
+}
+
+.icon:hover {
+    transform: scale(1.3);
+    transition-duration: 0.5s;
+    color: #FF7B7B;
+}
+
+.dailylife-content strong{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
 </style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="웹 페이지 설명">
     <meta name="keywords" content="키워드1, 키워드2, 키워드3">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
@@ -297,11 +391,20 @@ table {
                         <div class="profile">
                             <img src="image/mimoticon.png" alt="mimoticon">
                         </div>
-                        <div class="profile_text">
+                        <div class="profile_box">
                             <p>모두들 반가워요<br>
                                 나는 멋진 웹퍼블을<br>
                                 꿈꾸고 있는 이소연이야<br>
                             </p>
+
+                            <div class="profile-info">
+                                <div class="email">
+                                    <span>lsyeon0825@gmail.com</span>
+                                </div>
+                                <div class="git-icon">
+                                <i class="fab fa-github"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- 메인컨텐츠 우측 메뉴-->
@@ -315,14 +418,14 @@ table {
                 </div>
             </div>
         </div>
-            <!-- portpolio -->
-            <div class="portpolio">
-                <div class="portpolio-header">
+            <!-- portfolio -->
+            <div class="portfolio">
+                <div class="portfolio-header">
                     <h1>PORTPOLIO</h1>
                 </div>
 
-                <div class="portpolio-content">
-                    <div class="portpolio-content-box">
+                <div class="portfolio-content">
+                    <div class="portfolio-content-box">
                         <div class="box"></div>
                         <div class="box"></div>
                         <div class="box"></div>
@@ -353,7 +456,64 @@ table {
 
             <!--  daily life    -->
             <div class="dailylife">
-                <div></div>
+                <div class="dailylife-header">
+                    <h1>DAILY LIFE</h1>
+                    <p>이 땡자의 소소한 일상들 입니다:) </p>
+                </div>
+
+                <div class="dailylife-content">
+                    <!-- box1 -->
+                    <div class="box">
+                        <div class="thumbnail">
+                            <img src="image/cafe3.jpg">
+                        </div>
+
+                        <div class="date-wrap">
+                            <span class="date">April 27th, 2023</span>
+                            <div class="icon"><i class="fas fa-heart"></i></i></div>
+                        </div>
+                        <strong>공트럴파크 카페 뿌시기 데이트</strong>
+                    </div>
+
+                    <!-- box2 -->
+                    <div class="box">
+                        <div class="thumbnail">
+                            <img src="image/cafe3.jpg">
+                        </div>
+
+                        <div class="date-wrap">
+                            <span class="date">April 27th, 2023</span>
+                            <div class="icon"><i class="fas fa-heart"></i></i></div>
+                        </div>
+                        <strong>공트럴파크 카페 뿌시기 데이트</strong>
+                    </div>
+
+                    <!-- box3 -->
+                    <div class="box">
+                        <div class="thumbnail">
+                            <img src="image/cafe3.jpg">
+                        </div>
+
+                        <div class="date-wrap">
+                            <span class="date">April 27th, 2023</span>
+                            <div class="icon"><i class="fas fa-heart"></i></i></div>
+                        </div>
+                        <strong>공트럴파크 카페 뿌시기 데이트</strong>
+                    </div>
+
+                    <!-- box4 -->
+                    <div class="box">
+                        <div class="thumbnail">
+                            <img src="image/cafe3.jpg">
+                        </div>
+
+                        <div class="date-wrap">
+                            <span class="date">April 27th, 2023</span>
+                            <div class="icon"><i class="fas fa-heart"></i></i></div>
+                        </div>
+                        <strong>공트럴파크 카페 뿌시기 데이트</strong>
+                    </div>
+                </div>
             </div>
     </div>
 </body>
