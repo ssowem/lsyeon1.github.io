@@ -162,20 +162,14 @@ table {
 }
 
 
-.portfolio {
-    width: 100%;
-    height: 600px;
-    margin-top: 100px;
-}
-
 .portfolio-header {
-    display: flex;
     width: 100%;
     max-width: 1600px;
     margin:0 auto;
 }
 
 .portfolio-header h1 {
+    padding-top: 100px;
     font-size: 52px;
     font-style: italic;
     font-family: 'Roboto', sans-serif;
@@ -184,31 +178,49 @@ table {
     color: #FF7B7B;
 }
 
-.portfolio-content {
-    position: relative;
-    display: flex;
+.portfolio {
     background-color: #FEE9E3;
+}
+
+.portfolio-content {
     width: 100%;
-    height: 500px;
+    max-width: 1600px;
+    height: 900px;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .portfolio-content-box {
-    position: absolute;
-    width: 100%;
-    max-width: 1600px;
-    height: 320px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: space-between;
+    width: 60%;
+    height: 600px;
+    margin: 0 auto;
 }
 
+
+
 .portfolio .box {
-    width: 30%;
-    height: 320px;
+    height: 600px;
     border: 1px solid black;
-    background-color:#ffffff;
+
+}
+
+.portfolio .box img {
+    width: 100%;
+    height: 600px;
+}
+
+.portfolio-content-text {
+    width: 40%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-inner {
+
 }
 
 .gallery {
@@ -419,16 +431,33 @@ table {
             </div>
         </div>
             <!-- portfolio -->
-            <div class="portfolio">
-                <div class="portfolio-header">
-                    <h1>PORTPOLIO</h1>
-                </div>
 
+            <div class="portfolio-header">
+                <h1>PORTPOLIO</h1>
+            </div>
+            
+            <div class="portfolio">
                 <div class="portfolio-content">
                     <div class="portfolio-content-box">
-                        <div class="box"><a href="/pet-reservation/main.html">ㅇㅇ</a></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
+                        <a href="/pet-reservation/main.html">
+                        <div class="box">
+                            <img src="image/pp.png">
+                        </div>
+                        </a>
+                    </div>
+
+                    <div class="portfolio-content-text">
+                        <div class="text-inner">
+                            <h3>
+                            반려동물 예약 사이트<br>
+                            건강하개
+                            </h3>
+
+                            <span>
+                                반려동물의 병원,미용,택시 모든 예약을<br>
+                                쉽고 간편하게 할 수 있도록 만든 사이트 입니다.
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
