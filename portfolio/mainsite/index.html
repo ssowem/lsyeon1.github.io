@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- <script src="js/swiper-bundle.min.js"></script> -->
+    <script src=" https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/7be7a8a9f7.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 메인화면 영역 -->
+        <section class="main">
+
+            <div id="ham-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>        
+
+            <div class="main-content">
+                <ul id="mainnav">
+                    <li>
+                        <a href="#">HOME</a>
+                    </li>
+                    <li>
+                        <a href="#">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="#">PORTFOILO</a>
+                    </li>
+                    <li>
+                        <a href="#">CONTACT</a>
+                    </li>
+                </ul>
+                <div class="bg" id="mainbg">
+                    <div class="main-text" id="main-text">
+                        <div class="left">
+                            <span>환영합니다 :-) </span>
+                            <h1 class="main-h1">WELCOME</h1>
+                        </div>
+                        <div class="line"></div>
+                        <div class="right">
+                            <h1 class="main-h1">
+                                SOYEON'S<br>
+                                PORTPOLIO
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- <div class="github">
+                <a href="#" id="gittext">Github</a>
+                <i class="fa-brands fa-github" id="giticon"></i>
+            </div> -->
+
+            <!-- 마우스 스크롤 애니메이션 -->
+            <span class="scroll-btn">
+                <a href="#">
+                    <span class="mouse">
+                        <span>
+                        </span>
+                    </span>
+                </a>
+            </span>
+
+
+        </section>
+
+        <section class="about section" id="about">
+            <div class="container">
+
+                <div class="title"><h1>About me</h1></div>
+
+                <div class="mbti">
+                    <img src="images/mbtibg.png" alt="">
+                    <!-- <img src="images/mbtibg2.png" alt=""> -->
+
+                    <div class="text a">
+                        <span>#호기심</span>
+                    </div>
+
+                    <div class="text b">
+                        <span>#자기성찰</span>
+                    </div>
+
+                    <div class="text c">
+                        <span>#조화로운</span>
+                    </div>
+
+                    <div class="text d">
+                        <span>#다정함</span>
+                    </div>
+
+                    <div class="text f">
+                        <span>#감각적인</span>
+                    </div>
+                </div>
+
+                <div class="title bottom">
+                    <span class="str">
+                        <!-- mbti 한줄 텍스트 JS -->
+                        <span class="accent">새로운 경험</span>에 대한 도전이 늘 즐겁고, <span class="accent">어려운 일</span>에도 주저하지 않아요 😃
+                    </span>
+                                                <!--  38자 -->
+                        
+                </div>
+                
+ 
+                <div class="inner">
+                    <div class="content-left">
+                        <div class="skills">
+                            <div class="textbox">
+                                <span>저는 이런 것들을</span>
+                                <span>다룰 줄 알아요 :) </span>
+                            </div>
+
+                            <div class="skillboxwrap">
+                                <span>Skills</span>
+                                <div class="skillbox">
+                                    <div class="skill"><img src="images/html.png" alt=""></div>
+                                    <div class="skill"><img src="images/css.png" alt=""></div>
+                                    <div class="skill"><img src="images/JavaScript-logo.png" alt=""></div>
+                                    <div class="skill"><img src="images/jquery.png" alt=""></div>
+                                    <div class="skill"><img src="images/figma.png" alt=""></div>
+                                    <div class="skill"><img src="images/ps.png" alt=""></div>
+                                </div>
+                            </div>
+
+                            <div class="skillboxwrap">
+                                <span>Collab Tools</span>
+                                <div class="skillbox">
+                                    <div class="skill"><img src="images/git.png" alt=""></div>
+                                    <div class="skill"><img src="images/slack.png" alt=""></div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="content-right">
+                        <img src="images/hello.gif" alt="">
+                    </div>
+
+                    <!-- <div class="content-left">
+                        <img src="images/hello.gif" alt="">
+                    </div>
+                    <div class="content-right">
+                        <div class="skills">
+                            <div class="textbox">
+                                <span>저는 이런 것들을</span>
+                                <span>다룰 줄 알아요 :) </span>
+                            </div>
+
+                            <div class="skillboxwrap">
+                                <h1>Skills</h1>
+                                <div class="skillbox">
+                                    <div class="skill"><img src="images/html.png" alt=""></div>
+                                    <div class="skill"><img src="images/css.png" alt=""></div>
+                                    <div class="skill"><img src="images/JavaScript-logo.png" alt=""></div>
+                                    <div class="skill"><img src="images/jquery.png" alt=""></div>
+                                    <div class="skill"><img src="images/figma.png" alt=""></div>
+                                    <div class="skill"><img src="images/ps.png" alt=""></div>
+                                </div>
+                            </div>
+
+                            <div class="skillboxwrap">
+                                <h1>Collab Tools</h1>
+                                <div class="skillbox">
+                                    <div class="skill"><img src="images/git.png" alt=""></div>
+                                    <div class="skill"><img src="images/slack.png" alt=""></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div> -->
+
+
+                </div>
+            </div>
+        </section>
+
+        <section class="portfoilo section">
+            <div class="container">
+                <div class="title">
+                    <h1>Portfoilo</h1>
+                    <span class="text">그동안 열심히 작업해온 결과물들입니다<span class="emoji">💻</span></span>
+                </div>
+
+
+                <div class="swiper-container content-slider">
+
+                    <!-- "swiper-wrapper wrapper -->
+                    <ul class="swiper-wrapper wrapper">
+                        <!-- homeslide -->
+                        <li class="contentslide swiper-slide slide">
+                            <div class="text">
+                                <div class="detail">
+                                    <h3>포트폴리오 사이트 01</h3>
+                                    <span>작업기간: 7일 14hr</span>
+                                    <div class="guide">
+                                        <div class="keyword">
+                                            <p>Keyword</p>
+                                        
+                                            <div class="key-box">
+                                                <div>Simple</div>
+                                                <div>Sky</div>
+                                                <div>Text</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="button">
+                                    <a href="#">Quick Link</a>
+                                </div>
+                            </div> 
+                            <div class="thumbnail"><img src="images/cs1.jpg" alt=""></div>
+                        </li>
+
+                        <li class="contentslide swiper-slide slide">
+                            <div class="text">
+                                <div class="detail">
+                                    <h3>포트폴리오 사이트 01</h3>
+                                    <span>작업기간: 7일 14hr</span>
+                                    <div class="guide">
+                                        <div class="keyword">
+                                            <p>Keyword</p>
+                                        
+                                            <div class="key-box">
+                                                <div>Simple</div>
+                                                <div>Sky</div>
+                                                <div>Text</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="button">
+                                    <a href="#">Quick Link</a>
+                                </div>
+                            </div> 
+                            <div class="thumbnail"><img src="images/cs1.jpg" alt=""></div>
+
+
+                        </li>
+
+                        <li class="contentslide swiper-slide slide">
+                            <div class="text">
+                                <div class="detail">
+                                    <h3>포트폴리오 사이트 01</h3>
+                                    <span>작업기간: 7일 14hr</span>
+                                    <div class="guide">
+                                        <div class="keyword">
+                                            <p>Keyword</p>
+                                        
+                                            <div class="key-box">
+                                                <div>Simple</div>
+                                                <div>Sky</div>
+                                                <div>Text</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="button">
+                                    <a href="#">Quick Link</a>
+                                </div>
+                            </div> 
+                            <div class="thumbnail"><img src="images/cs1.jpg" alt=""></div>
+
+                        </li>
+
+                        <li class="contentslide swiper-slide slide">
+                            <div class="text">
+                                <div class="detail">
+                                    <h3>포트폴리오 사이트 01</h3>
+                                    <span>작업기간: 7일 14hr</span>
+                                    <div class="guide">
+                                        <div class="keyword">
+                                            <p>Keyword</p>
+                                        
+                                            <div class="key-box">
+                                                <div>Simple</div>
+                                                <div>Sky</div>
+                                                <div>Text</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="button">
+                                    <a href="#">Quick Link</a>
+                                </div>
+                            </div> 
+                            <div class="thumbnail"><img src="images/cs1.jpg" alt=""></div>
+
+                        </li>
+
+
+
+
+                    </ul>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="contact section">
+            <div class="container">
+                <div class="title">
+                    <h1>Contact</h1>
+                    <span class="text">LET'S TALK <span class="emoji">👋🏻</span></span>
+                </div>
+
+                <div class="inner">
+                  
+                    <div class="contactbox">
+                        <div class="box-row">
+                            <div class="col">
+                                <span class="title">Email</span>
+                                <span>lsyeon1015@gmail.com</span>
+                            </div>
+
+                            <div class="col">
+                                <span class="title">Phone</span>
+                                <span>+82 010-9448-1104</span>
+                            </div>
+
+                            <div class="col">
+                                <span class="title">Site</span>
+                                <span>test.github.io</span>
+                            </div>
+                        </div>
+
+                        <div class="btn-row">
+                            <a href="#" class="btn">message</a>
+                            <a href="#" class="btn">Resume</a>
+                            <a href="#" class="btn">github</a>
+                        </div>
+
+                    <!-- <div class="contact-btn">
+                        <div class="btn">
+                            <a href="#">
+                                <i class="fa-solid fa-file"></i>
+                                Resume
+                            </a>
+                        </div>
+                        
+                        <div class="btn">
+                            
+                            <a href="#">
+                                <i class="fa-brands fa-github"></i>
+                                Git
+                            </a>
+                        </div>
+                    </div> -->
+                    </div>
+
+                    <!-- <div class="box left">
+                        <div class="rowwrap">
+                            <div class="contact-row">
+                                <h1>Email</h1>
+                                <span>lsyeon1015@gmail.com</span>
+                            </div>
+
+                            <div class="contact-row">
+                                <h1>Phone</h1>
+                                <span>+82 010-9448-1104</span>
+                            </div>
+
+                            <div class="contact-row">
+                                <h1>Address</h1>
+                                <span>서울시 중랑구 중화동</span>
+                            </div>
+
+                            <div class="contact-row">
+                                <h1>Site</h1>
+                                <span>test.github.io</span>
+                            </div>
+                        </div>
+
+                        <div class="btn left"><a href="#">Resume</a></div>
+                    </div> -->
+
+                    <!-- <div class="box right">
+
+
+                        <form action="">
+                            <div class="input">
+                                <span>보내는 사람</span>
+                                <input type="text">
+                            </div>
+
+                            <div class="input">
+                                <span>제목</span>
+                                <input type="text">
+                            </div>
+
+                            <div class="input">
+                                <span>내용</span>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                            
+                        </form>
+
+                        <div class="btn"><a href="#">Send</a></div>
+                    </div> -->
+                
+                </div>
+                
+
+            </div>
+        </section>
+
+        <div class="footer">
+            copyright&copy; 2023 SOYEON. All rights reserved.
+        </div>
+
+    </div>
+
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
