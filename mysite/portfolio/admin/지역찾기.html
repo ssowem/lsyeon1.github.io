@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        #myInput {
+          /* background-image: url('/css/searchicon.png');
+        background-position: 10px 10px;
+          background-repeat: no-repeat; */
+          width: 100%;
+          font-size: 16px;
+          padding: 12px 20px 12px 40px;
+          border: 1px solid #ddd;
+          margin-bottom: 12px;
+        }
+
+        #myTable {
+          border-collapse: collapse;
+          width: 100%;
+          border: 1px solid #ddd;
+          font-size: 18px;
+        }
+
+        #myTable th, #myTable td {
+          text-align: left;
+          padding: 12px;
+        }
+
+        #myTable tr {
+          border-bottom: 1px solid #ddd;
+        }
+
+        #myTable tr.header, #myTable tr:hover {
+          background-color: #F1F1F1;
+        }
+
+        #container_shop{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <button class="search_area">지역명검색</button>
+    <button class="search_shop">매장검색</button>
+
+    <div id="container_area">
+        <h2>지역명으로 찾기</h2>
+        <select name="mainCity" class="main-city">
+            <option value="">부산</option>
+            <option value="">경기</option>
+            <option value="">서울</option>
+            <option value="">제주</option>
+        </select>
+    </div>
+
+    <div id="container_shop">
+        <h2>매장명 찾기</h2>
+        <input type="text" id="myInput"
+        placeholder="지역을 입력하세요" onkeyup="myF()">
+    </div>
+
+    <table id="myTable">
+        <tr class="header">
+            <td style="width:50%;">주소</td>
+            <td style="width:25%">매장이름</td>
+            <td style="width:25%">연락처</td>
+        </tr>
+        <tr>
+            <td>서울특별시 중구 퇴계로 52</td>
+            <td>서울시,종로</td>
+            <td>02-111-1111</td>
+        </tr>
+        <tr>
+            <td>경기도 인천광역시</td>
+            <td>경기, 인천</td>
+            <td>032-111-1111</td>
+
+        </tr>
+        <tr>
+            <td>경기도 수원시 장황동</td>
+            <td>경기, 수원</td>
+            <td>02-111-1111</td>
+        </tr>
+        <tr>
+            <td>부산 중구 을지로 52</td>
+            <td>부산,종로</td>
+            <td>02-111-1111</td>
+        </tr>
+        <tr>
+            <td>경기도 분당상록동 </td>
+            <td>경기, 부천</td>
+            <td>032-111-1111</td>
+          </tr>
+          <tr>
+            <td>제주 종로구 광화문대로</td>
+            <td>제주, 광화문</td>
+            <td>02-111-1111</td>
+          </tr>
+          <tr>
+            <td>서울시 도봉구 노해로</td>
+            <td>서울, 창동역</td>
+            <td>02-111-1111</td>
+          </tr>
+          <tr>
+            <td>서울시 영등포구 선유로 </td>
+            <td>서울, 양평점</td>
+            <td>02-111-1111</td>
+          </tr>
+        </table>
+
+        <script>
+            let container = document.querySelectorAll('.container_name')
+           let mainCity = document.querySelector('.main-city')
+           let table = document.getElementById("myTable");
+           let tr = document.getElementsByTagName("tr");
+
+
+        //    window.onload = mainCity.onchange
+           // 매장명검색 , 지역검색 버튼 
+
+            let containerArea = document.getElementById('container_area')
+            let containerShop= document.getElementById('container_shop')
+    
+            $("button:eq(0)").click(function(){
+                containerArea.style.display = "block";
+                containerShop.style.display ="none"
+                getStart();
+            })
+
+            $("button:eq(1)").click(function(){
+                containerShop.style.display = "block";
+                containerArea.style.display ="none"
+                //console.log("매장")
+                // console.log("myF ", filter)
+                getStart();
+            })
+
+            // 초기화
+         
+
+        //    드롭다운에서의 변경은 onchange 온체인지 ! 
+        mainCity.onchange = function(){
+           let mainOption = mainCity.options[mainCity.selectedIndex].innerText
+           myOption(mainOption)
+        }
+
+        function myOption(cityName){
+            let input = document.getElementById('myInput')
+            // let filter = input.value.toUpperCase()
+            let filter = cityName 
+            console.log("myOption ", filter)
+            for(let i = 0; i<tr.length; i++){
+               let td = tr[i].getElementsByTagName('td')[1]
+               if(td){
+                if(td.innerHTML.toUpperCase().indexOf(filter) > -1 ){
+                    tr[i].style.display=""
+                } else {
+                    tr[i].style.display="none"
+                }
+               } 
+            }
+           }
+
+        //   필터 초기화
+
+        function getStart(){
+            for (let i=1; i<tr.length; i++){
+                tr[i].style.display=""
+            }
+        }
+
+           function myF(){
+           
+            let input = document.getElementById('myInput')
+            let filter = input.value.toUpperCase()
+            for(let i=0; i<tr.length; i++){
+                let td = tr[i].getElementsByTagName('td')[1]
+                if(td){
+                    if(td.innerHTML.toUpperCase().indexOf(filter) > -1 ){
+                        tr[i].style.display= ""
+                    } else {
+                        tr[i].style.display= "none"
+                    }
+                }
+            }
+            
+           }
+
+           
+        </script>
+</body>
+</html>

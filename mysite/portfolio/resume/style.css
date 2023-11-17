@@ -1,0 +1,11 @@
+body {
+    width: 595px;
+    height: 942px;
+    margin:0 auto;
+    border: 1px solid;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
