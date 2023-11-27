@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,8 +28,8 @@
                 </div>
 
 
-                <ul class="menubox-list">
-                    <li class="menubox">
+                <ul class="menubox-list main">
+                    <li>
                         <div class="menubox">
                             <a href="#" class="menubox-link">
                                 <div class="item">
@@ -399,6 +399,7 @@
                 </div>
             </div>
 
+            <!-- 등록하기 -->
             <div class="add-modal" id="add-modal">
                 <div class="bg-area" id="bg-area" onclick="bgClose()"></div>
                 <div class="modal-wrap">
@@ -414,7 +415,7 @@
                                 </div>
         
                                 <div class="input-box guardian-name">
-                                    <input type="text" placeholder="보호자 이름">
+                                    <input type="text" placeholder="보호자 이름" >
                                 </div>
                             </div>
         
@@ -655,7 +656,7 @@
                 <div class="modal-wrap">
                     <div class="content guardian">
                         <div class="title">
-                            <h1>학생정보</h1>
+                            <h1 id="modal-title">상세정보</h1>
                         </div>
 
                         <div class="guardian-info">
@@ -664,8 +665,8 @@
                                     <label for="">보호자 이름</label>
                                 </div>
         
-                                <div class="detail-label name">
-                                    <label for="">홍길동</label>
+                                <div class="input-box guardian-name">
+                                    <input type="text" placeholder="보호자 이름" value="홍길동">
                                 </div>
                             </div>
         
@@ -674,16 +675,18 @@
                                     <label for="">주소</label>
                                 </div>
         
-                                <div class="detail-label">
-                                    <label for="">04524</label>
-                                </div>
+                                <div class="input-box">
+                                    <div class="address-wrap">
+                                        <div class="box left">
+                                            <input type="text" class="address-code" id="zip-code" placeholder="우편번호" value="02043">
+                                            <a href="#" class="btn" onclick="execDaumPostcode()">검색</a>
+                                        </div>
 
-                                <div class="detail-label">
-                                    <label for="">서울특별시 중구 세종대로 110</label>
-                                </div>
-
-                                <div class="detail-label">
-                                    <label for="">서울특별시청</label>
+                                        <div class="box right">
+                                            <input type="text" id="address-1" placeholder="주소" value="서울 중랑구 봉화산로 179 (중랑구청)">
+                                            <input type="text" id="address-2" placeholder="상세주소" value="중랑구청">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -692,19 +695,11 @@
                                     <label for="">연락처</label>
                                 </div>
         
-
-                                    <div class="detail-label">
-                                        <label for="">010</label>
-                                    </div>
-
-                                    <div class="detail-label">
-                                        <label for="">9448</label>
-                                    </div>
-
-                                    <div class="detail-label">
-                                        <label for="">1104</label>
-                                    </div>
-
+                                <div class="input-box phone">
+                                    <input type="text" value="010"><span>-</span>
+                                    <input type="text" value="1234"><span>-</span>
+                                    <input type="text" value="5678">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -718,8 +713,8 @@
                                     <label for="">학생 이름</label>
                                 </div>
         
-                                <div class="detail-label">
-                                    <label for="">땡자</label>
+                                <div class="input-box student-name">
+                                    <input type="text" placeholder="학생 이름" value="땡자">
                                 </div>
 
                                 <div class="notice">
@@ -732,8 +727,18 @@
                                     <label for="">성별</label>
                                 </div>
         
-                                <div class="detail-label">
-                                    <label for="">Female</label>
+                                <div class="input-box">
+                                    <div class="checkbox-wrap">      
+                                        <div class="check-item">
+                                            <input type="radio" name="gender" checked>
+                                            <label for="">Female</label>
+                                        </div>
+        
+                                        <div class="check-item">
+                                            <input type="radio" name="gender">
+                                            <label for="">Male</label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
         
@@ -742,8 +747,28 @@
                                     <label for="">반 이름</label>
                                 </div>
         
-                                <div class="detail-label">
-                                    <label for="">건강하개</label>
+                                <div class="input-box">
+                                    <div class="checkbox-wrap">
+                                        <div class="check-item">
+                                            <input type="radio" name="class">
+                                            <label for="">행복</label>
+                                        </div>
+        
+                                        <div class="check-item">
+                                            <input type="radio" name="class" checked>
+                                            <label for="">건강</label>
+                                        </div>
+        
+                                        <div class="check-item">
+                                            <input type="radio" name="class">
+                                            <label for="">사랑</label>
+                                        </div>
+        
+                                        <div class="check-item">
+                                            <input type="radio" name="class">
+                                            <label for="">미정</label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
         
@@ -752,8 +777,18 @@
                                     <label for="">중성화</label>
                                 </div>
         
-                                <div class="detail-label">
-                                    <label for="">완료</label>
+                                <div class="input-box">
+                                    <div class="checkbox-wrap">      
+                                        <div class="check-item">
+                                            <input type="radio" name="neutralize">
+                                            <label for="">완료</label>
+                                        </div>
+        
+                                        <div class="check-item">
+                                            <input type="radio" name="neutralize" checked>
+                                            <label for="">예정</label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
         
@@ -762,8 +797,8 @@
                                     <label for="">생년월일</label>
                                 </div>
         
-                                <div class="detail-label">
-                                    <label for="">2007.10.15</label>
+                                <div class="search-item option">
+                                    <input type="date" class="birth" value="2007-10-15">
                                 </div>
                             </div>
         
@@ -772,8 +807,12 @@
                                     <label for="">몸무게</label>
                                 </div>
         
-                                <div class="detail-label">
-                                    <label for="">2kg ~ 9kg</label>
+                                <div class="search-item option">
+                                    <select name="" id="">
+                                        <option value="small">2kg ~ 9kg</option>
+                                        <option value="mideum">9kg ~ 27kg</option>
+                                        <option value="large">27kg 이상</option>
+                                    </select>
                                 </div>
                             </div>
         
@@ -782,8 +821,12 @@
                                     <label for="">견종</label>
                                 </div>
         
-                                <div class="detail-label">
-                                    <label for="">말티즈</label>
+                                <div class="search-item option">
+                                    <select name="" id="">
+                                        <option value="">말티즈</option>
+                                        <option value="">진돗개</option>
+                                        <option value="">보더콜리</option>
+                                    </select>
                                 </div>
                             </div>
 
@@ -793,8 +836,26 @@
                                 </div>
         
                                 <div class="input-box">
-                                    <div class="detail-label">
-                                        <label for="">약물복용</label>
+                                    <div class="checkbox-wrap">      
+                                        <div class="check-item">
+                                            <input type="checkbox" class="class-chk" >
+                                            <label for="">알레르기</label>
+                                        </div>
+        
+                                        <div class="check-item">
+                                            <input type="checkbox" class="class-chk" checked>
+                                            <label for="">약물복용</label>
+                                        </div>
+        
+                                        <div class="check-item">
+                                            <input type="checkbox" class="class-chk" >
+                                            <label for="">행동문제</label>
+                                        </div>
+        
+                                        <div class="check-item">
+                                            <input type="checkbox" class="class-chk" >
+                                            <label for="">없음</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -807,8 +868,15 @@
                                 </div>
 
                                 <div class="image-upload">
-                                    <img src="images/ddangja.jpg" alt="">
+
                                 </div>
+                            </div>
+
+                            <div class="item btn">
+                                <label for="file">
+                                    <div class="btn-upload" id="btn-upload">사진 올리기</div>
+                                </label>
+                                <input type="file" name="file" id="file">
                             </div>
                         </div>
                     </div>
@@ -818,22 +886,14 @@
                                 <label for="">요구사항</label>
                             </div>
     
-                            <div class="detail-label">
-                                <label for="">무리한 운동은 금지</label>
-                            </div>
-
-                            <div class="detail-label">
-                                <label for="">간식급여 금지</label>
-                            </div>
-
-                            <div class="detail-label">
-                                <label for="">충분한 물 섭취 필요</label>
+                            <div class="input-box memo">
+                                <textarea id="textarea">충분한 물 섭취할 수 있게 해주시고, 간식 급여하지 말아주세요</textarea>
                             </div>
                         </div>
                     </div>
-                    <div class="student-info-bottom info-close">
+                    <div class="student-info-bottom">
                         <a href="#" class="remove">삭제</a>
-                        <a href="#">수정</a>
+                        <a href="#" onclick="editBtn()">수정</a>
                         <a href="#" class="close" onclick="closeBtn()">닫기</a>
                     </div>
                 </div>
@@ -848,6 +908,3 @@
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </body>
 </html>
-
-
-<!-- <i class="fa-solid fa-chevron-down"></i> -->

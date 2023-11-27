@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="kr">
+<html lang="ko">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Soyeon's Portfolio" />
@@ -7,14 +7,13 @@
     <meta property="og:type" content="website" /> 
     <meta property="og:image" content="http://lsyeon1104.dothome.co.kr/cs1.jpg" />
     <meta property="og:description" content="반갑습니다" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css.css">
+    <link rel="stylesheet" href="css/main.css">
 
     <script src=" https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://kit.fontawesome.com/7be7a8a9f7.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <title>Soyeon's Portfolio Site</title>
 </head>
 <body>
@@ -36,9 +35,13 @@
                 </li>
             </ul>
 
+            <!-- <div class="ham-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div> -->
+
             <div id="main-intro">
                 <div class="flex-row-left" id="bounce">
-                    <span>환영합니다 :-) </span>
+                    <span>환영합니다 :) </span>
                     <h1>WELCOME</h1>
                 </div>
                 <div class="line"></div>
@@ -128,7 +131,31 @@
             </div>
 
             <div class="swiper-container content-slider">
-                <ul class="swiper-wrapper wrapper">
+                <ul class="slider-wrap">
+                    <li class="contentslide swiper-slide slide">
+                        <div class="text">
+                            <div class="detail">
+                                <h3>메가박스 사이트 제작(클론 코딩)</h3>
+                                <span>작업기간: 2일 (12hr)</span>
+                                <div class="guide">
+                                    <div class="keyword">
+                                        <p>Keyword</p>
+                                    
+                                        <div class="key-box">
+                                            <span>레이아웃</span>
+                                            <span>플렉서블</span>
+                                            <!-- <div>Text</div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button">
+                                <a href="portfolio/megabox/megabox.html" target="_blank">Veiw More</a>
+                            </div>
+                        </div> 
+                        <div class="thumbnail"><img src="images/megabox.png" alt=""></div>
+                    </li>
+
                     <li class="contentslide swiper-slide slide">
                         <div class="text">
                             <div class="detail">
@@ -147,37 +174,13 @@
                                 </div>
                             </div>
                             <div class="button">
-                                <a href="portfolio/spotify/spotify.html">Quick Link</a>
+                                <a href="portfolio/spotify/spotify.html" target="_blank">Veiw More</a>
                             </div>
                         </div> 
                         <div class="thumbnail"><img src="images/p1.png" alt=""></div>
                     </li>
 
-                    <li class="contentslide swiper-slide slide">
-                        <div class="text">
-                            <div class="detail">
-                                <h3>메가박스 사이트 제작(클론 코딩)</h3>
-                                <span>작업기간: 2일 (12hr)</span>
-                                <div class="guide">
-                                    <div class="keyword">
-                                        <p>Keyword</p>
-                                    
-                                        <div class="key-box">
-                                            <span>클론</span>
-                                            <span>플렉스</span>
-                                            <!-- <div>Text</div> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="button">
-                                <a href="portfolio/megabox/megabox.html">Quick Link</a>
-                            </div>
-                        </div> 
-                        <div class="thumbnail"><img src="images/megabox.png" alt=""></div>
 
-
-                    </li>
 
                     <li class="contentslide swiper-slide slide">
                         <div class="text">
@@ -189,47 +192,36 @@
                                         <p>Keyword</p>
                                     
                                         <div class="key-box">
-                                            <span>Simple</span>
-                                            <span>Sky</span>
-                                            <span>Text</span>
+                                            <span>반응형</span>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="button">
-                                <a href="portfolio/admin/index.html">Quick Link</a>
+                                <a href="portfolio/admin/index.html" target="_blank">Veiw More</a>
                             </div>
                         </div> 
                         <div class="thumbnail"><img src="images/admin.jpg" alt=""></div>
-
-                    </li>
-
-                    <li class="contentslide swiper-slide slide">
-                        <div class="text">
-                            <div class="detail">
-                                <h3>포트폴리오04 진행중</h3>
-                                <span>작업기간: ------</span>
-                                <div class="guide">
-                                    <div class="keyword">
-                                        <p>Keyword</p>
-                                    
-                                        <div class="key-box">
-                                            <span>Simple</span>
-                                            <span>Sky</span>
-                                            <span>Text</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="button">
-                                <a href="#">Quick Link</a>
-                            </div>
-                        </div> 
-                        <div class="thumbnail"><img src="images/cs1.jpg" alt=""></div>
-
                     </li>
                 </ul>
 
+                <div class="pagenation">
+                    <button class="swiper-button-prev">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <div class="swiper-pagination">
+                        <span class="swiper-pagination-current">1</span>
+                        /
+                        <span class="swiper-pagination-total">3</span>
+                    </div>
+                    <button class="swiper-button-next">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+
+
+                </div>
             </div>
         </div>
     </section>
@@ -246,17 +238,17 @@
                 <div class="contact-row">
                     <div class="col">
                         <span class="bold">Email</span>
-                        <span>testtest@gmail.com</span>
+                        <span>lsyeon0516@gmail.com</span>
                     </div>
 
                     <div class="col">
                         <span class="bold">Phone</span>
-                        <span>+82 010-1234-1234</span>
+                        <span>+82 010-9448-1104</span>
                     </div>
 
                     <div class="col">
                         <span  class="bold">Site</span>
-                        <span>test.github.io</span>
+                        <span>https://github.com/ssowem</span>
                     </div>
                 </div>
 
@@ -280,7 +272,6 @@
     <section class="footer">
         copyright&copy; 2023 SOYEON. All rights reserved.
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 

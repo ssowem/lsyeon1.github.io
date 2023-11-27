@@ -53,27 +53,65 @@ window.addEventListener("scroll", () => {
 });
 
 
-var swiper = new Swiper(".content-slider", {
-  spaceBetween: 100,
-  centeredSlides: true,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
-  loop:true,
-  loopedSlides: 2,
-  speed: 4000,
-});
+let slidesNum = 0;
+let slideValue = 0;
+const slideWidth = 124;
 
-function loader(){
-  document.querySelector('.swiper-container').classList.add('fade-out');
+const prevBtn = document.querySelector(".swiper-button-prev");
+const nextBtn = document.querySelector(".swiper-button-next");
+const slides = document.querySelectorAll(".slide");
+const paginationCurrent = document.querySelector(".swiper-pagination-current");
+const paginationTotal = document.querySelector(".swiper-pagination-total");
+
+function updatePagination() {
+  paginationCurrent.textContent = slidesNum + 1;
+  paginationTotal.textContent = slides.length;
 }
 
-function fadeOut(){
-  setInterval(loader, 3000);
+function next() {
+  if (slidesNum < 2) {
+
+    prevBtn.removeAttribute('disabled');
+    slideValue -= slideWidth;
+
+    slides.forEach((slide) => {
+      slide.style.transform = `translateX(${slideValue}rem)`;
+    });
+
+    slidesNum += 1;
+    updatePagination();
+  }
+
+  if (slidesNum === 2) {
+    nextBtn.setAttribute('disabled','true');
+  }
 }
 
-window.onload = fadeOut;
 
+function prev() {
+  if (slidesNum > 0) {
+    nextBtn.removeAttribute('disabled');
+    slideValue += slideWidth;
+
+    slides.forEach((slide) => {
+      slide.style.transform = `translateX(${slideValue}rem)`;
+    });
+
+    slidesNum -= 1;
+    updatePagination();
+  }
+
+  if (slidesNum === 0) {
+    prevBtn.setAttribute('disabled','true');
+  }
+}
+
+function init() {  //초기 화면 상태
+  prevBtn.setAttribute('disabled', 'true'); //속성이 disabled가 된다.
+  prevBtn.addEventListener("click", prev); //클릭시 다음으로 이동한다.
+  nextBtn.addEventListener("click", next);//클릭시 이전으로 이동한다.
+  updatePagination();
+}
+init();
 
 
