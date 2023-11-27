@@ -6,6 +6,7 @@
     font-style:
      normal;
 }
+
 @font-face {
     font-family: 'JeonjuCraftGoR';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/JeonjuCraftGoR.woff2') format('woff2');
@@ -21,6 +22,11 @@
 }
 
 * {margin: 0; padding: 0; box-sizing: border-box; transition: all 0.2s linear;}
+
+body {
+    overflow-x: hidden;
+}
+
 html {font-size: 10px; scroll-behavior: smooth; overflow-x: hidden;}
 
 :root {
@@ -639,8 +645,6 @@ a:hover {
 
 
 @media screen and (max-width: 1024px) {
-    body {border:2px solid pink;}
-
     .container { max-width: 76.8rem; }
 
     #main .container {
@@ -765,8 +769,6 @@ a:hover {
 }
 
 @media screen and (max-width: 768px) {
-    body {border:2px solid green;}
-
     .container { max-width: 40rem; }
 
     .container.holder { padding: 10rem 0;}
