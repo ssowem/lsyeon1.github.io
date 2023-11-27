@@ -646,7 +646,7 @@ a:hover {
 
 @media screen and (max-width: 1600px) {
     body {
-        background-color: green;
+        border:2px solid green;
     }
     
     #main-intro h1 {
@@ -660,7 +660,25 @@ a:hover {
 }
 
 @media screen and (max-width: 1400px) {
+    body {
+        border:2px solid red;
+    }
 
+    .container { max-width: 90%; }
+    
+    #main #round-bg {
+        width: 100% !important;
+        border-radius: 0 !important;
+        top: 0 !important;
+    }
+
+    
+    #main .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+    }
     
     #main-intro {
         flex-direction: column;
@@ -673,34 +691,14 @@ a:hover {
         display: none;
     }
 
-}
-
-@media screen and (max-width: 1024px) {
-    .container { max-width: 76.8rem; }
-
-    #main .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 100vh;
-    }
-
-    #main #round-bg {
-        width: 100% !important;
-        border-radius: 0 !important;
-        top: 0 !important;
-    }
-
-   
-   
-    #main-intro .flex-row-right {
-        font-size: 4.5rem;
-    }
-    
     .main-nav {
         margin-top: 5rem;
     }
 
+    #main-intro .flex-row-right {
+        font-size: 4.5rem;
+    }
+    
     .title h1 {
         font-size: 7rem;
     }
@@ -708,6 +706,10 @@ a:hover {
     .title p {
         font-size: 3rem;
     }
+
+}
+
+@media screen and (max-width: 1024px) {
 
     #about .about-intro {
         font-size: 2rem;
@@ -790,6 +792,15 @@ a:hover {
     .container { max-width: 80%; }
 
     .container.holder { padding: 10rem 0;}
+
+    .main-nav {
+        padding: 0 3rem;
+    }
+
+    .main-nav li a {
+        font-size: 1.4rem;
+   
+    }
 
     .title p {
         font-size: 2rem;
@@ -910,6 +921,3 @@ a:hover {
     }
 }
 
-@media screen and (max-width: 768px) {
-   
-}
