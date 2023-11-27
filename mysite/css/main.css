@@ -769,7 +769,7 @@ a:hover {
 }
 
 @media screen and (max-width: 768px) {
-    .container { max-width: 40rem; }
+    .container { max-width: 80%; }
 
     .container.holder { padding: 10rem 0;}
 
@@ -891,4 +891,8 @@ a:hover {
     .contact-wrap .btn-row a {
         font-size: 1.2rem;
     }
+}
+
+@media screen and (max-width: 768px) {
+   
 }
