@@ -644,6 +644,37 @@ a:hover {
 }
 
 
+@media screen and (max-width: 1600px) {
+    body {
+        background-color: green;
+    }
+    
+    #main-intro h1 {
+        
+        font-size: 10rem !important;
+    }
+
+    #main-intro .flex-row-right {
+        font-size: 7rem;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+
+    
+    #main-intro {
+        flex-direction: column;
+        gap: 0;
+        position: static;
+        transform: none;
+    }
+
+    #main-intro .line {
+        display: none;
+    }
+
+}
+
 @media screen and (max-width: 1024px) {
     .container { max-width: 76.8rem; }
 
@@ -660,21 +691,8 @@ a:hover {
         top: 0 !important;
     }
 
-    #main-intro {
-        flex-direction: column;
-        gap: 0;
-        position: static;
-        transform: none;
-    }
-
-    #main-intro .line {
-        display: none;
-    }
-
-    #main-intro h1 {
-        font-size: 10rem !important;
-    }
-
+   
+   
     #main-intro .flex-row-right {
         font-size: 4.5rem;
     }
