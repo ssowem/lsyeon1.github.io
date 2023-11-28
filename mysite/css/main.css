@@ -914,7 +914,7 @@ a:hover {
     }
 
     .contact-wrap .btn-row .btn i {
-        font-size: 1.4rem;
+        display: none;
     }
 
     .footer {
