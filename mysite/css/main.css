@@ -343,14 +343,9 @@ a:hover {
     text-align: left;
 }
 
-.slide .text span {
+.detail .duration-info {
     font-size: 1.8rem;
     color: #2b2b2b;
-}
-
-.slide .text p {
-    line-height: 1.3;
-    text-transform:uppercase;
 }
 
 .slide .thumbnail{
@@ -374,7 +369,7 @@ a:hover {
     font-size: 2rem;
     padding: 1.4rem 4rem;
     border-radius: 1rem;
-    background-color: #FF76C7;
+    background-color: #007662;
     color: #fff;
     font-family: 'Montserrat';
     box-shadow: rgba(0, 0, 0, 0.15) 0.4rem 0.4rem 0.3rem 0.1rem;
@@ -386,14 +381,16 @@ a:hover {
 
 .keyword p {
     display: inline-block;
+    font-family: 'Montserrat';
+    font-size: 1.6rem;
+    line-height: 1.3;
     font-weight: 500;
     color: #fff;
+    text-transform:uppercase;
     border-radius: 1rem;
-    font-size: 1.6rem;
     background-color: #2b2b2b;
     padding: 6px 24px;
     margin-bottom: 1.4rem;
-    font-family: 'Montserrat';
 }
 
 .keyword .key-box{
@@ -759,7 +756,7 @@ a:hover {
         font-size: 3rem;
     }
 
-    .slide .text span {
+    .detail .duration-info {
         font-size: 1.8rem;
     }
 
@@ -889,7 +886,7 @@ a:hover {
         flex : 0;
     }
 
-    .slide .text span {
+    .detail .duration-info {
         font-size: 1.4rem;
     }
 
