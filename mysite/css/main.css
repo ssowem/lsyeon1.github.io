@@ -782,14 +782,15 @@ a:hover {
 @media screen and (max-width: 768px) {
     .container { max-width: 80%; }
 
-    .container.holder { padding: 10rem 0;}
+    .container.holder { padding: 5rem 0;}
 
     .main-nav {
-        padding: 0 3rem;
+        padding: 0 2rem;
     }
 
     .main-nav li a {
         font-size: 1.4rem;
+        padding: 1rem;
    
     }
 
