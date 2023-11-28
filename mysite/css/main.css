@@ -628,11 +628,11 @@ a:hover {
 }
 
 .scroll-right {
-    transform:  translate(-23rem,0);
+    transform:  translate(-10rem,0);
 }
 
 .scroll-left {
-    transform: translate(23rem,0);
+    transform: translate(10rem,0);
 }
 
 .scroll-bottom {
