@@ -819,7 +819,7 @@ a:hover {
     }
 
     .about-mbti .text.small span {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .about-mbti .text.medium span {
@@ -906,10 +906,24 @@ a:hover {
 
     .contact-row {
         flex-direction: column;
+        font-size: 1.4rem;
     }
 
     .contact-wrap .btn-row a {
         font-size: 1.2rem;
+    }
+
+    .contact-wrap .btn-row .btn i {
+        font-size: 1.4rem;
+    }
+
+    .footer {
+        padding: 3rem;
+        font-size: 1.4rem;
+    }
+
+    .notice {
+        font-size: 1.4rem;
     }
 }
 
