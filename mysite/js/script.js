@@ -68,7 +68,10 @@ function updatePagination() {
   paginationTotal.textContent = slides.length;
 }
 
+
+
 function next() {
+  
   if (slidesNum < 2) {
 
     prevBtn.removeAttribute('disabled');

@@ -306,7 +306,6 @@ a:hover {
 /*********** 포트폴리오 ************/
 
 .detail h3 {
-    font-weight: 500;
     font-size: 3.8rem;
     margin-bottom: 0.4rem;
     color: #2b2b2b;
@@ -320,6 +319,7 @@ a:hover {
 .slider-wrap {
     display: flex;
     width: 124rem;
+    height: 52rem;
 }
 
 .slide {
@@ -334,7 +334,7 @@ a:hover {
 
 
 .slide .text {
-    flex: 70rem;
+    flex: 55%;
     padding: 5rem;
     display: flex;
     flex-direction: column;
@@ -349,7 +349,7 @@ a:hover {
 }
 
 .slide .thumbnail{
-    flex: 45rem;
+    flex: 45%;
     display: flex;
     align-items: center;
     justify-content: center;   
@@ -358,8 +358,9 @@ a:hover {
 
 .slide .thumbnail img{
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
+    object-fit: cover;
     border-top-right-radius: 3rem;
     border-bottom-right-radius: 3rem;
 }
@@ -652,6 +653,7 @@ a:hover {
 }
 
 @media screen and (max-width: 1400px) {
+    /* body{border:2px solid blue;} */
     .container { max-width: 90%; }
     
     #main #round-bg {
@@ -660,7 +662,6 @@ a:hover {
         top: 0 !important;
     }
 
-    
     #main .container {
         display: flex;
         flex-direction: column;
@@ -695,10 +696,60 @@ a:hover {
         font-size: 3rem;
     }
 
+    .slider-wrap {
+        width: 96rem;
+        height: 46rem;
+    }
+
+    .slide {
+        min-width: 96rem;
+    }
+
+    .slide .button a {
+        font-size: 1.8rem;
+    }
+
+    .keyword p {
+        font-size: 1.4rem;
+    }
+
+    .detail h3 {
+        font-size: 2.8rem;
+    }
+
+    .detail .duration-info {
+        font-size: 1.6rem;
+    }
+
+    .keyword .key-box span {
+        width: 8rem;
+        height: 8rem;
+        line-height: 6rem;
+        font-size: 1.4rem;
+    }
+
+    .pagenation .swiper-button-prev,
+    .pagenation .swiper-button-next {
+        width: 3.8rem;
+        height: 3.8rem;
+    }
+
+    .pagenation .swiper-button-prev i,
+    .pagenation .swiper-button-next i {
+        font-size: 1.6rem;
+    }
+
+    .swiper-pagination {
+        font-size: 1.6rem;
+    }
+
 }
 
 @media screen and (max-width: 1024px) {
-
+    /* body {
+        border: 2px solid sandybrown;
+    } */
+    
     #about .about-intro {
         font-size: 2rem;
         padding: 2rem;
@@ -738,45 +789,69 @@ a:hover {
         width: 29rem;
     }
 
+    .slider-wrap {
+        width: 76.8rem;
+        height: 42rem;
+    }
+
+    .title h1 {
+        font-size: 6.4rem;
+    }
+
+    .title p {
+        font-size: 2.6rem;
+    }
+
     .slide {
-        flex-direction: column;
-        min-width: 60rem;
+        min-width: 76.8rem;
     }
 
-    .slide .thumbnail img {
-        border-top-right-radius: 0;
-        border-bottom-left-radius: 3rem;
-    }
-
-    .slide .text {
-        flex: 45rem;
-    }
-
-    .detail h3 {
-        font-size: 3rem;
-    }
-
-    .detail .duration-info {
-        font-size: 1.8rem;
+    .slide .button a {
+        font-size: 1.6rem;
     }
 
     .keyword p {
         font-size: 1.2rem;
     }
 
-    .keyword .key-box span {
-        width: 8rem;
-        height: 8rem;
-        line-height: 6rem;
-        font-size: 1.2rem;
+    .detail h3 {
+        font-size: 2.2rem;
     }
 
-    .slide .button a {
+    .detail .duration-info {
         font-size: 1.4rem;
     }
+
+    .keyword .key-box span {
+        width: 6rem;
+        height: 6rem;
+        line-height: 4rem;
+        font-size: 1rem;
+    }
+
+    .pagenation .swiper-button-prev,
+    .pagenation .swiper-button-next {
+        width: 3.6rem;
+        height: 3.6rem;
+    }
+
+    .pagenation .swiper-button-prev i,
+    .pagenation .swiper-button-next i {
+        font-size: 1.4rem;
+    }
+
+    .swiper-pagination {
+        font-size: 1.4rem;
+    }
+    
+
+
 }
 
 @media screen and (max-width: 768px) {
+    /* body {
+        border:2px solid #b370ff;
+    } */
     .container { max-width: 80%; }
 
     .container.holder { padding: 5rem 0;}
@@ -867,37 +942,54 @@ a:hover {
 
     .content-slider {
         margin-top: 3rem;
+        height: auto;
     }
 
-    .slide .text {
-        padding: 3rem;
-        flex: 34rem;
-    }
-
-    .detail h3 {
-        font-size: 2.4rem;
+    .slider-wrap {
+        width: 43.8rem;
+        height: 100%;
+        margin: 0 auto;
+        flex-direction: column;
+        gap: 4rem;
     }
 
     .slide {
-        min-width: 40rem;
+        min-width: 43.8rem;
+        flex-direction: column;
     }
-    
-    .slide .thumbnail {
-        flex : 0;
+
+    .slide .text {
+        padding: 2.5rem;
+        flex-direction: row;
+        align-items: flex-end;
+        
+    }
+
+    .detail h3 {
+        font-size: 1.6rem;
     }
 
     .detail .duration-info {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+    }
+
+    .slide .button a {
+        font-size: 1.2rem;
+        padding: 1.2rem 2rem;
     }
 
     .keyword p {
         font-size: 1rem;
-        padding: .6rem 2rem;
+    }
+    .slide .thumbnail img {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 3rem;
+        height: 40rem;
     }
 
-    .slide .button a {
-        padding: 1.4rem 3rem;
-        font-size: 1.1rem;
+
+    .pagenation {
+        display: none;
     }
 
     .contact-row {
