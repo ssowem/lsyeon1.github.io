@@ -320,6 +320,7 @@ a:hover {
     display: flex;
     width: 124rem;
     height: 52rem;
+    border:1px double mediumspringgreen;
 }
 
 .slide {
@@ -653,7 +654,7 @@ a:hover {
 }
 
 @media screen and (max-width: 1400px) {
-    /* body{border:2px solid blue;} */
+    body{border:2px solid blue;}
     .container { max-width: 90%; }
     
     #main #round-bg {
@@ -746,9 +747,9 @@ a:hover {
 }
 
 @media screen and (max-width: 1024px) {
-    /* body {
+    body {
         border: 2px solid sandybrown;
-    } */
+    }
     
     #about .about-intro {
         font-size: 2rem;
@@ -849,9 +850,9 @@ a:hover {
 }
 
 @media screen and (max-width: 768px) {
-    /* body {
+    body {
         border:2px solid #b370ff;
-    } */
+    }
     .container { max-width: 80%; }
 
     .container.holder { padding: 5rem 0;}
@@ -946,17 +947,17 @@ a:hover {
     }
 
     .slider-wrap {
-        width: 40rem;
+        width: 38rem;
         height: 100%;
         margin: 0 auto;
-        flex-direction: column;
-        gap: 4rem;
+        /* flex-direction: column;
+        gap: 4rem; */
     }
 
     .slide {
-        min-width: 40rem;
+        min-width: 38rem;
         flex-direction: column;
-        margin-right: 0;
+        /* margin-right: 0; */
     }
 
     .slide .text {
@@ -976,7 +977,8 @@ a:hover {
 
     .slide .button a {
         font-size: 1.2rem;
-        padding: 1.2rem 2rem;
+        padding: 1.5rem;
+        text-align: center;
     }
 
     .keyword p {
@@ -987,10 +989,6 @@ a:hover {
         border-top-right-radius: 0;
         border-bottom-left-radius: 3rem;
         height: 38rem;
-    }
-
-    .pagenation {
-        display: none;
     }
 
     .contact-row {

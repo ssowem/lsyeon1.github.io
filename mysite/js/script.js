@@ -55,11 +55,12 @@ window.addEventListener("scroll", () => {
 
 let slidesNum = 0;
 let slideValue = 0;
-const slideWidth = 124;
+let slideWidth;
 
 const prevBtn = document.querySelector(".swiper-button-prev");
 const nextBtn = document.querySelector(".swiper-button-next");
-const slides = document.querySelectorAll(".slide");
+const slideWrap = document.querySelector(".slider-wrap");
+const slides = document.querySelectorAll(".slide")
 const paginationCurrent = document.querySelector(".swiper-pagination-current");
 const paginationTotal = document.querySelector(".swiper-pagination-total");
 
@@ -68,18 +69,23 @@ function updatePagination() {
   paginationTotal.textContent = slides.length;
 }
 
+function updateSlideWidth() {
+  slideWidth = slideWrap.getBoundingClientRect().width;
+  slideValue = -slidesNum * slideWidth;
+  slideWrap.style.transform = `translateX(${slideValue}px)`;
+}
+  window.addEventListener("resize", () => {
+    updateSlideWidth();
+  });
 
 
-function next() {
-  
+  function next() {
   if (slidesNum < 2) {
 
     prevBtn.removeAttribute('disabled');
     slideValue -= slideWidth;
 
-    slides.forEach((slide) => {
-      slide.style.transform = `translateX(${slideValue}rem)`;
-    });
+    slideWrap.style.transform = `translateX(${slideValue}px)`;
 
     slidesNum += 1;
     updatePagination();
@@ -90,15 +96,12 @@ function next() {
   }
 }
 
-
 function prev() {
   if (slidesNum > 0) {
     nextBtn.removeAttribute('disabled');
     slideValue += slideWidth;
 
-    slides.forEach((slide) => {
-      slide.style.transform = `translateX(${slideValue}rem)`;
-    });
+    slideWrap.style.transform = `translateX(${slideValue}px)`;
 
     slidesNum -= 1;
     updatePagination();
@@ -109,12 +112,13 @@ function prev() {
   }
 }
 
-function init() {  //초기 화면 상태
-  prevBtn.setAttribute('disabled', 'true'); //속성이 disabled가 된다.
-  prevBtn.addEventListener("click", prev); //클릭시 다음으로 이동한다.
-  nextBtn.addEventListener("click", next);//클릭시 이전으로 이동한다.
+function init() {
+  prevBtn.setAttribute('disabled', 'true');
+  prevBtn.addEventListener("click", prev);
+  nextBtn.addEventListener("click", next);
   updatePagination();
 }
-init();
 
+init();
+updateSlideWidth();
 
