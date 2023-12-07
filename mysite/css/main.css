@@ -320,7 +320,6 @@ a:hover {
     display: flex;
     width: 124rem;
     height: 52rem;
-    border:1px double mediumspringgreen;
 }
 
 .slide {
@@ -654,7 +653,6 @@ a:hover {
 }
 
 @media screen and (max-width: 1400px) {
-    body{border:2px solid blue;}
     .container { max-width: 90%; }
     
     #main #round-bg {
@@ -747,10 +745,6 @@ a:hover {
 }
 
 @media screen and (max-width: 1024px) {
-    body {
-        border: 2px solid sandybrown;
-    }
-    
     #about .about-intro {
         font-size: 2rem;
         padding: 2rem;
@@ -850,9 +844,6 @@ a:hover {
 }
 
 @media screen and (max-width: 768px) {
-    body {
-        border:2px solid #b370ff;
-    }
     .container { max-width: 80%; }
 
     .container.holder { padding: 5rem 0;}
