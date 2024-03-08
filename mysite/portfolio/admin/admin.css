@@ -34,13 +34,6 @@ select,input:focus {
 }
 
 
-
-input{
-
-}
-
-
-
 .container {
     display: flex;
     width: 100%;

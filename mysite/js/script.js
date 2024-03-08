@@ -80,37 +80,32 @@ function updateSlideWidth() {
 
 
   function next() {
-  if (slidesNum < 2) {
-
-    prevBtn.removeAttribute('disabled');
-    slideValue -= slideWidth;
-
-    slideWrap.style.transform = `translateX(${slideValue}px)`;
-
-    slidesNum += 1;
-    updatePagination();
+    if (slidesNum < slides.length - 1) {
+      prevBtn.removeAttribute('disabled');
+      slideValue -= slideWidth;
+      slideWrap.style.transform = `translateX(${slideValue}px)`;
+      slidesNum += 1;
+      updatePagination();
+    }
+  
+    if (slidesNum === slides.length - 1) {
+      nextBtn.setAttribute('disabled', true);
+    }
   }
-
-  if (slidesNum === 2) {
-    nextBtn.setAttribute('disabled','true');
+  
+  function prev() {
+    if (slidesNum > 0) {
+      nextBtn.removeAttribute('disabled');
+      slideValue += slideWidth;
+      slideWrap.style.transform = `translateX(${slideValue}px)`;
+      slidesNum -= 1;
+      updatePagination();
+    }
+  
+    if (slidesNum === 0) {
+      prevBtn.setAttribute('disabled', true);
+    }
   }
-}
-
-function prev() {
-  if (slidesNum > 0) {
-    nextBtn.removeAttribute('disabled');
-    slideValue += slideWidth;
-
-    slideWrap.style.transform = `translateX(${slideValue}px)`;
-
-    slidesNum -= 1;
-    updatePagination();
-  }
-
-  if (slidesNum === 0) {
-    prevBtn.setAttribute('disabled','true');
-  }
-}
 
 function init() {
   prevBtn.setAttribute('disabled', 'true');

@@ -29,18 +29,8 @@ function removeClass(item){
 
 
 const selected = document.querySelectorAll('.selected')
-// const arrowFold = document.querySelectorAll('.fold')
-
-//const foldList = document.querySelectorAll('.fold');
-
 selected.forEach(function(item){
     item.addEventListener('click', function(event){
-        debugger;
-
-
-        //화살표
-        //foldList.forEach(item2 => item.classList.add("fold-active"));
-        //item.classList.add("fold-active");
         const fold = item.querySelector('.fold');
         const isActive = fold.classList.contains("fold-active");
 
@@ -50,25 +40,15 @@ selected.forEach(function(item){
             fold.classList.add("fold-active");
         }
 
-
-        //foldList.forEach(fold => fold.classList.add("fold-active"));
-
         const targetId = item.getAttribute('data-target');
         const sub = document.getElementById(targetId);
         
         if(sub) {
             sub.classList.toggle('active');
-            // const arrowFold = document.querySelector('[data-target="' + targetId + '"]');
-            // if(arrowFold) {
-            //     arrowFold.classList.add('fold-active')
-            // }
         }
 
     })
 })
-
-
-
 
 
 const ClassAllCheck = document.getElementById("class-all");
@@ -142,9 +122,24 @@ function bgClose() {
     infoModal.style.display = "none";
 }
 
+
+var inputs = document.querySelectorAll('.info-modal input');
+var select = document.querySelectorAll('.info-modal select');
+var btnUpload = document.querySelector('#btn-upload');
 userData.forEach(function(item){
     item.addEventListener("click",function(event){
         infoModal.style.display = "block";
+        btnUpload.style.display = "none";
+        inputs.forEach(function(input){
+            input.setAttribute('readonly', 'true');
+            input.style.pointerEvents = 'none';
+      
+        });
+        // accent-color: #2C80FF;
+
+        select.forEach(function(select){
+            select.style.pointerEvents = 'none'
+        });
     });
 })
 
@@ -153,6 +148,20 @@ function closeBtn() {
     addModal.style.display = "none";
 }
 
+function editBtn() {
+    btnUpload.style.display = "block";
+    inputs.forEach(function(input){
+        input.removeAttribute('readonly')
+        input.style.pointerEvents = 'auto';
+    });
+
+    select.forEach(function(select){
+        select.style.pointerEvents = 'auto'
+    });
+
+    const modalTitle = document.getElementById('modal-title');
+    modalTitle.textContent = '학생정보 수정'
+}
 
 function execDaumPostcode(){
     new daum.Postcode( {
@@ -162,19 +171,3 @@ function execDaumPostcode(){
       }
     } ).open();
   }
-
-
-//   textarea 엔터 도트 출력
-// const textArea =  document.getElementById('textarea');
-// textArea.addEventListener('input', () => {
-//     const currentText = textArea.value;
-
-//         // 텍스트를 줄바꿈으로 분리
-//         const lines = currentText.split('\n');
-
-//         // 각 행의 앞에 도트를 추가하여 새로운 텍스트 생성
-//         const newText = lines.map(line => `• ${line}`).join('\n');
-
-//         // 텍스트 업데이트
-//         textArea.value = newText;
-// })
