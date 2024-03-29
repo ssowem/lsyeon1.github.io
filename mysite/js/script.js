@@ -84,6 +84,7 @@ function next() {
     slideValue -= slideWidth;
     slideWrap.style.transform = `translateX(${slideValue}px)`;
     slidesNum += 1;
+    updateSlideWidth();
     updatePagination();
   }
 
@@ -98,6 +99,7 @@ function prev() {
     slideValue += slideWidth;
     slideWrap.style.transform = `translateX(${slideValue}px)`;
     slidesNum -= 1;
+    updateSlideWidth();
     updatePagination();
   }
 
