@@ -88,7 +88,6 @@ a:hover {
     overflow: hidden;
 }
 
-
 #main #round-bg {
     width: 90%;
     height: 100%;
@@ -320,6 +319,7 @@ a:hover {
     display: flex;
     width: 124rem;
     height: 52rem;
+    gap: 3rem;
 }
 
 .slide {
@@ -329,7 +329,6 @@ a:hover {
     box-shadow: 1px 1px 15px 7px rgba(0, 0, 0, 0.05);
     border-radius: 3rem;
     transition: transform 1s;
-    margin-right: 3rem;
 }
 
 
@@ -940,9 +939,6 @@ a:hover {
     .slider-wrap {
         width: 38rem;
         height: 100%;
-        margin: 0 auto;
-        /* flex-direction: column;
-        gap: 4rem; */
     }
 
     .slide {

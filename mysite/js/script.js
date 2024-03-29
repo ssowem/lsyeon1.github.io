@@ -4,10 +4,9 @@ const crossPoint = .3;
 
 const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
-      if (entry.isIntersecting) {
-          entry.target.classList.add('scroll-action');
-      } 
-      else {entry.target.classList.remove('scroll-action');}
+    if (entry.isIntersecting) {
+      entry.target.classList.add('scroll-action');
+    }
   });
 
 }, {
@@ -17,8 +16,6 @@ const observer = new IntersectionObserver((entries, observer) => {
 targetElement.forEach(element => {
   observer.observe(element);
 })
-
-
 
 
 const mainBg = document.getElementById("round-bg");
@@ -33,14 +30,14 @@ if (savedScrollPosition) {
 
 window.addEventListener("scroll", () => {
   const scrollPosition = window.scrollY;
-  
+
   if (scrollPosition > 100) {
     mainBg.style.width = "100%";
     mainBg.style.borderRadius = "0";
     mainBg.style.top = "0";
     mainIntro.style.top = "45%";
 
-    
+
   } else {
     mainBg.style.width = "90%";
     mainBg.style.borderRadius = "555px";
@@ -74,38 +71,40 @@ function updateSlideWidth() {
   slideValue = -slidesNum * slideWidth;
   slideWrap.style.transform = `translateX(${slideValue}px)`;
 }
-  window.addEventListener("resize", () => {
-    updateSlideWidth();
-  });
+
+window.addEventListener("resize", () => {
+  updateSlideWidth();
+  updatePagination();
+});
 
 
-  function next() {
-    if (slidesNum < slides.length - 1) {
-      prevBtn.removeAttribute('disabled');
-      slideValue -= slideWidth;
-      slideWrap.style.transform = `translateX(${slideValue}px)`;
-      slidesNum += 1;
-      updatePagination();
-    }
-  
-    if (slidesNum === slides.length - 1) {
-      nextBtn.setAttribute('disabled', true);
-    }
+function next() {
+  if (slidesNum < slides.length - 1) {
+    prevBtn.removeAttribute('disabled');
+    slideValue -= slideWidth;
+    slideWrap.style.transform = `translateX(${slideValue}px)`;
+    slidesNum += 1;
+    updatePagination();
   }
-  
-  function prev() {
-    if (slidesNum > 0) {
-      nextBtn.removeAttribute('disabled');
-      slideValue += slideWidth;
-      slideWrap.style.transform = `translateX(${slideValue}px)`;
-      slidesNum -= 1;
-      updatePagination();
-    }
-  
-    if (slidesNum === 0) {
-      prevBtn.setAttribute('disabled', true);
-    }
+
+  if (slidesNum === slides.length - 1) {
+    nextBtn.setAttribute('disabled', true);
   }
+}
+
+function prev() {
+  if (slidesNum > 0) {
+    nextBtn.removeAttribute('disabled');
+    slideValue += slideWidth;
+    slideWrap.style.transform = `translateX(${slideValue}px)`;
+    slidesNum -= 1;
+    updatePagination();
+  }
+
+  if (slidesNum === 0) {
+    prevBtn.setAttribute('disabled', true);
+  }
+}
 
 function init() {
   prevBtn.setAttribute('disabled', 'true');
