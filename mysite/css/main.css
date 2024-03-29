@@ -1002,12 +1002,20 @@ a:hover {
 }
 
 @media screen and (max-width: 430px) {
+    .title p {
+        font-size: 1.5rem;
+    }
+
     .slider-wrap {
         width: 28rem;
         gap: 2rem;
     }
     .slide {
         min-width: 28rem;
+    }
+
+    .keyword .key-box {
+        gap: 1rem;
     }
 
     .keyword .key-box span {
