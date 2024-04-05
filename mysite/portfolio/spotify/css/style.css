@@ -90,11 +90,10 @@ li {
 }
 
 .figma iframe {
-  width: 380px;
+  width: 100%;
   height: 200px;
   border-radius: 20px;
 }
-
 
 .figma .more-text span {
   display: inline;
@@ -173,7 +172,6 @@ li {
 }
 
 @media (max-width: 900px) {
-
   body {
     height: auto;
   }
