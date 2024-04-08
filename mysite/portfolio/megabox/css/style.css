@@ -57,6 +57,7 @@ h1 {
   height: auto;
   margin-top: 14px;
   justify-content: center;
+  gap: 20px;
 }
 
 .text .large {
@@ -90,6 +91,22 @@ h1 {
   height: auto;
   display: block;
 }
+
+.left-content {
+  position: relative;
+}
+
+.left-content::after{
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 36px);
+  height: 2px;
+  background-color: #5b318e;
+}
+
 
 .left-content,
 .right-content {
@@ -212,6 +229,11 @@ h1 {
 
   .content {
     flex-direction: row;
+    gap: 0;
+  }
+
+  .left-content::after {
+    content: none;
   }
 
   .text .large {
