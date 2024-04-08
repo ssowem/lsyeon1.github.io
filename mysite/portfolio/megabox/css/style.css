@@ -247,6 +247,10 @@ h1 {
   .visual-right img {
     border-radius: 30px;
   }
+
+  .left-content .image {
+    height: 814px;
+  }
 }
 
 @keyframes bounce {
