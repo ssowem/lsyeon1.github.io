@@ -333,7 +333,6 @@ a:hover {
     min-width: 124rem;
     box-shadow: 1px 1px 15px 7px rgba(0, 0, 0, 0.05);
     border-radius: 3rem;
-    transition: transform 1s;
 }
 
 

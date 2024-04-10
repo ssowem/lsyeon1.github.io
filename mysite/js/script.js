@@ -130,7 +130,7 @@ function handleTouchEnd(){
   if(!touchMoved) {
     return;
   } 
-  const threshold = 50; //최소 값 설정하기
+  const threshold = 100; //최소 값 설정하기
   const distance = touchStartX - touchEndX; //이동된 거리 계산한 값
 
   //왼쪽으로 이동한거리가 설정값보다 컸을때 next()호출
