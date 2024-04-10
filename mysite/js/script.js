@@ -43,7 +43,6 @@ window.addEventListener("scroll", () => {
     mainBg.style.borderRadius = "555px";
     mainBg.style.top = "20%";
     mainIntro.style.top = "57%";
-
   }
 
   localStorage.setItem("scrollPosition", scrollPosition);
@@ -157,9 +156,10 @@ function handleTouchEnd() {
   }
 }
 
+// { passive: false } ios에서 e.preventDefault()작동 (페이지스크롤방지)
 function initTouchEvents() {
   slideWrap.addEventListener('touchstart', handleTouchStart, false);
-  slideWrap.addEventListener('touchmove', handleTouchMove, false);
+  slideWrap.addEventListener('touchmove', handleTouchMove,{ passive: false });
   slideWrap.addEventListener('touchend', handleTouchEnd, false);
 }
 
