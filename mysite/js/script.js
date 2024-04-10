@@ -108,7 +108,7 @@ function prev() {
   }
 }
 
-// 터치 슬라이드
+// 터치 슬라이드 영역
 let touchStartX = 0;
 let touchEndX = 0;
 let touchMoved = false;
@@ -121,20 +121,31 @@ function handleTouchStart(e) {
 
 // 이동 중 마지막 위치
 function handleTouchMove(e) {
-  touchEndX = e.touches[0].clientX;
-  touchMoved = true;
+  if (touchStartX !== 0) {
+    touchEndX = e.touches[0].clientX;
+    touchMoved = true;
+    const threshold = 10;
+    const distance = touchStartX - touchEndX;
+
+    // 움직임이 설정값 10보다 클때 페이지 스크롤 방지
+    //  math.abs함수는 절대값을 반환해서 +,-를 무시함. 즉, 양쪽 움직임을 감지
+    if(Math.abs(distance) > threshold) {
+      e.preventDefault();
+    }
+  }
+
 }
 
 // 터치이벤트 종료하는 순간을 감지하고 좌우이동 결정
-function handleTouchEnd(){
-  if(!touchMoved) {
+function handleTouchEnd() {
+  if (!touchMoved) {
     return;
-  } 
-  const threshold = 100; //최소 값 설정하기
+  }
+  const threshold = 50; //최소 값 설정하기
   const distance = touchStartX - touchEndX; //이동된 거리 계산한 값
 
   //왼쪽으로 이동한거리가 설정값보다 컸을때 next()호출
-  if(distance > threshold) {
+  if (distance > threshold) {
     console.log("next()호출")
     next()
   }
