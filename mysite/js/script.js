@@ -36,8 +36,6 @@ window.addEventListener("scroll", () => {
     mainBg.style.borderRadius = "0";
     mainBg.style.top = "0";
     mainIntro.style.top = "45%";
-
-
   } else {
     mainBg.style.width = "90%";
     mainBg.style.borderRadius = "555px";
@@ -128,7 +126,7 @@ function handleTouchMove(e) {
 
     // 움직임이 설정값 10보다 클때 페이지 스크롤 방지
     //  math.abs함수는 절대값을 반환해서 +,-를 무시함. 즉, 양쪽 움직임을 감지
-    if(Math.abs(distance) > threshold) {
+    if (Math.abs(distance) > threshold) {
       e.preventDefault();
     }
   }
@@ -156,10 +154,10 @@ function handleTouchEnd() {
   }
 }
 
-// { passive: false } ios에서 e.preventDefault()작동 (페이지스크롤방지)
+// { passive: false }는 ios에서 e.preventDefault()작동되게함 (페이지스크롤방지)
 function initTouchEvents() {
   slideWrap.addEventListener('touchstart', handleTouchStart, false);
-  slideWrap.addEventListener('touchmove', handleTouchMove,{ passive: false });
+  slideWrap.addEventListener('touchmove', handleTouchMove, { passive: false });
   slideWrap.addEventListener('touchend', handleTouchEnd, false);
 }
 
