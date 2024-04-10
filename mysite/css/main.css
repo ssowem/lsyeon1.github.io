@@ -315,8 +315,9 @@ a:hover {
     font-family: 'JeonjuCraftGoR';
 }
 
-.content-slider {
+#slider-container {
     margin-top: 10rem;
+    width:100%;
 }
 
 .slider-wrap {
@@ -936,7 +937,7 @@ a:hover {
         padding: 0.8rem;
     }
 
-    .content-slider {
+    #slider-container {
         margin-top: 3rem;
         height: auto;
     }

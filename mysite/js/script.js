@@ -108,30 +108,57 @@ function prev() {
   }
 }
 
+// 터치 슬라이드
+let touchStartX = 0;
+let touchEndX = 0;
+let touchMoved = false;
+
+// 터치이벤트 시작 위치
+function handleTouchStart(e) {
+  touchStartX = e.touches[0].clientX;
+  touchMoved = false;
+}
+
+// 이동 중 마지막 위치
+function handleTouchMove(e) {
+  touchEndX = e.touches[0].clientX;
+  touchMoved = true;
+}
+
+// 터치이벤트 종료하는 순간을 감지하고 좌우이동 결정
+function handleTouchEnd(){
+  if(!touchMoved) {
+    return;
+  } 
+  const threshold = 50; //최소 값 설정하기
+  const distance = touchStartX - touchEndX; //이동된 거리 계산한 값
+
+  //왼쪽으로 이동한거리가 설정값보다 컸을때 next()호출
+  if(distance > threshold) {
+    console.log("next()호출")
+    next()
+  }
+
+  //오른쪽으로 이동한거리가 설정값보다 작을때(즉,-50보다 작을때) prev()호출
+  else if (distance < -threshold) {
+    console.log("prev()호출")
+    prev();
+  }
+}
+
+function initTouchEvents() {
+  slideWrap.addEventListener('touchstart', handleTouchStart, false);
+  slideWrap.addEventListener('touchmove', handleTouchMove, false);
+  slideWrap.addEventListener('touchend', handleTouchEnd, false);
+}
+
 function init() {
   prevBtn.setAttribute('disabled', 'true');
   prevBtn.addEventListener("click", prev);
   nextBtn.addEventListener("click", next);
   updatePagination();
+  updateSlideWidth();
+  initTouchEvents();
 }
 
 init();
-updateSlideWidth();
-
-// 터치 슬라이드
-slideWrap.addEventListener("touchstart",touch_start);
-slideWrap.addEventListener("touchend", touch_end);
-
-let startX, endX;
-function touch_start(e) {
-  startX = e.touches[0].pageX;
-}
-
-function touch_end(e) {
-  endX = e.changedTouches[0].pageX;
-  if(startX > endX) {
-    next();
-  }else {
-    prev();
-  }
-}
