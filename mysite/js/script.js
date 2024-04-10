@@ -118,3 +118,20 @@ function init() {
 init();
 updateSlideWidth();
 
+// 터치 슬라이드
+slideWrap.addEventListener("touchstart",touch_start);
+slideWrap.addEventListener("touchend", touch_end);
+
+let startX, endX;
+function touch_start(e) {
+  startX = e.touches[0].pageX;
+}
+
+function touch_end(e) {
+  endX = e.changedTouches[0].pageX;
+  if(startX > endX) {
+    next();
+  }else {
+    prev();
+  }
+}
