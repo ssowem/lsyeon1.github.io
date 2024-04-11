@@ -1,1 +1,2 @@
-✨나의 포트폴리오✨
+✨WELCOME TO✨
+SOYEON'S PORTPOLIO
