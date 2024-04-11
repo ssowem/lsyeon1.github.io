@@ -53,13 +53,19 @@ a:hover {
     animation: jelly 0.8s infinite;
 }
 
-.container {
+/* .container {
     max-width: 124rem;
     margin: 0 auto;
-}
+} */
 
-.container.holder {
+/* .container.holder {
     padding: 15rem 0;
+} */
+
+.section_wrapper {
+    max-width: 124rem;
+    margin: 0 auto;
+    padding: 12rem 8rem;
 }
 
 .title h1 {
@@ -149,15 +155,17 @@ a:hover {
 }
 
 #bounce {
-    animation: none;
-    /* animation: jelly 0.5s; */
-    
+    animation: none;   
 }
 
 #main-intro .flex-row-left {
     text-align: right;
 }
 
+#main-intro .flex-row-left span {
+    display: block;
+    margin-bottom: 1rem;
+}
 #main-intro .flex-row-left h1{
     font-family: var(--font-f-main);
     font-size: var(--font-size-L);
@@ -235,7 +243,7 @@ a:hover {
 
 .myability {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 7rem;
     box-sizing: border-box;
@@ -316,13 +324,13 @@ a:hover {
 }
 
 #slider-container {
-    margin-top: 10rem;
+    margin-top: 6rem;
     width:100%;
 }
 
 .slider-wrap {
     display: flex;
-    width: 124rem;
+    width: 100%;
     height: 52rem;
     gap: 3rem;
 }
@@ -330,7 +338,7 @@ a:hover {
 .slide {
     display: flex;
     width: 100%;
-    min-width: 124rem;
+    min-width: 110rem;
     box-shadow: 1px 1px 15px 7px rgba(0, 0, 0, 0.05);
     border-radius: 3rem;
 }
@@ -399,18 +407,16 @@ a:hover {
 
 .keyword .key-box{
     display: flex;
-    gap: 1.4rem;
+    gap: 1rem;
 }
 
 .keyword .key-box span {
-    width: 10rem;
-    height: 10rem;
-    line-height: 8rem;
-    border-radius: 50%;
+    border-radius: 5rem;
     text-align: center;
-    box-shadow: -0.4rem 0.1rem 0.5rem 0.2rem rgba(0,0,0,0.15);
+    box-shadow: 0.3rem 0.3rem 0.5rem 0.1rem rgb(31 31 31 / 15%);
     font-size: 1.6rem;
-    padding: 1rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
     text-transform: uppercase;
 }
 
@@ -459,14 +465,23 @@ a:hover {
 
 
 #contact {
-    background-color: #FFC570;
+    position: relative;
 }
 
-#contact .container.holder {
-    margin-top: 10rem;
-    padding: 15rem 0 20rem 0 !important;
-}
 
+/* contact영역 전체배경색상주기 */
+#contact::before{
+    content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+  background-color: #FFC570;
+  z-index: -1;
+    
+}
 
 .contact-wrap {
     display: flex;
@@ -654,11 +669,17 @@ a:hover {
     #main-intro .flex-row-right {
         font-size: 7rem;
     }
+
+    .slide {
+        min-width: 108rem;
+    }
 }
 
 @media screen and (max-width: 1400px) {
-    .container { max-width: 90%; }
-    
+    .section_wrapper {
+        padding: 10rem 10rem;
+    }
+
     #main #round-bg {
         width: 100% !important;
         border-radius: 0 !important;
@@ -725,9 +746,6 @@ a:hover {
     }
 
     .keyword .key-box span {
-        width: 8rem;
-        height: 8rem;
-        line-height: 6rem;
         font-size: 1.4rem;
     }
 
@@ -744,6 +762,13 @@ a:hover {
 
     .swiper-pagination {
         font-size: 1.6rem;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    .slide {
+        min-width: 92rem;
     }
 
 }
@@ -779,18 +804,12 @@ a:hover {
         font-size: 1.6rem;
     }
 
-
     .ability-visual {
         margin-top: 17rem;
     }
 
     .ability-visual img {
         width: 29rem;
-    }
-
-    .slider-wrap {
-        width: 76.8rem;
-        height: 42rem;
     }
 
     .title h1 {
@@ -802,7 +821,7 @@ a:hover {
     }
 
     .slide {
-        min-width: 76.8rem;
+        min-width: 90rem;
     }
 
     .slide .button a {
@@ -822,10 +841,8 @@ a:hover {
     }
 
     .keyword .key-box span {
-        width: 6rem;
-        height: 6rem;
-        line-height: 4rem;
-        font-size: 1rem;
+        font-size: 1.2rem;
+        padding: 1rem 1rem;
     }
 
     .pagenation .swiper-button-prev,
@@ -842,16 +859,21 @@ a:hover {
     .swiper-pagination {
         font-size: 1.4rem;
     }
-    
-
-
 }
 
+@media screen and (max-width: 900px) {
+    .slide {
+        min-width: 87rem;
+    }
+}
+
+
 @media screen and (max-width: 768px) {
-    .container { max-width: 80%; }
 
-    .container.holder { padding: 5rem 0;}
-
+    .section_wrapper {
+    padding: 10rem 8rem;
+    }
+    
     .main-nav {
         padding: 0 2rem;
     }
@@ -867,6 +889,7 @@ a:hover {
 
     #main-intro .flex-row-left span {
         font-size: 1.8rem;
+        margin-bottom: .5rem;
     }
 
     #main-intro h1 {
@@ -938,7 +961,6 @@ a:hover {
 
     #slider-container {
         margin-top: 3rem;
-        height: auto;
     }
 
     .slider-wrap {
@@ -949,7 +971,6 @@ a:hover {
     .slide {
         min-width: 38rem;
         flex-direction: column;
-        /* margin-right: 0; */
     }
 
     .slide .text {
@@ -1006,28 +1027,41 @@ a:hover {
     }
 }
 
-@media screen and (max-width: 430px) {
+
+@media screen and (max-width: 600px) {
+    .slide {
+        min-width: 36rem;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .section_wrapper {
+        padding: 9rem 5rem;
+    }
+
     .title p {
         font-size: 1.5rem;
     }
 
     .slider-wrap {
-        width: 28rem;
+        width: 27rem;
         gap: 2rem;
     }
+
     .slide {
         min-width: 28rem;
     }
 
+    .slide .button a {
+        padding: 0.8rem;
+    }
+
     .keyword .key-box {
-        gap: 1rem;
+        gap: .6rem;
     }
 
     .keyword .key-box span {
-        width: 5rem;
-        height: 5rem;
-        line-height: 3rem;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 
     .slide .thumbnail img {
@@ -1035,7 +1069,22 @@ a:hover {
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
+    #main-intro h1 {
+        font-size: 4rem !important;
+    }
+
+    #main-intro .flex-row-right {
+        font-size: 1.8rem;
+    }
+    .section_wrapper {
+        padding: 6rem 2rem;
+    }
+
+    #about .about-intro {
+        margin-top: 2rem;
+    }
+
     .slider-wrap {
         width: 24rem;
         gap: 1rem;
@@ -1063,10 +1112,10 @@ a:hover {
     }
 
     .keyword .key-box span {
-        width: 4.5rem;
+        /* width: 4.5rem;
         height: 4.5rem;
         line-height: 2.5rem;
-        font-size: 0.6rem;
+        font-size: 0.6rem; */
     }
 
     .slide .button a{

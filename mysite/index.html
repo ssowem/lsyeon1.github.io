@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soyeon's Portfolio Site</title>
-    
-    <meta name="type" content="website"> 
+
+    <meta name="type" content="website">
     <meta name="site_name" content="Soyeon's Portfolio">
     <meta name="description" content="안녕하세요. 신입 개발자 이소연입니다!">
     <meta name="image" content="https://ssowem.github.io/portfolio/mysite/images/ogImage.jpg">
@@ -19,13 +20,15 @@
     <meta property="og:image" content="https://ssowem.github.io/portfolio/mysite/images/ogImage.jpg">
     <meta property="og:url" content="https://ssowem.github.io/portfolio/mysite/index.html">
     <link rel="icon" href="https://ssowem.github.io/portfolio/mysite/images/favicon.ico">
-    <link rel="apple-touch-icon" sizes="192x192" href="https://ssowem.github.io/portfolio/mysite/images/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="192x192"
+        href="https://ssowem.github.io/portfolio/mysite/images/icon-192x192.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="https://kit.fontawesome.com/7be7a8a9f7.js" crossorigin="anonymous"></script>
     <script src="js/script.js" defer></script>
 </head>
+
 <body>
     <section id="main">
         <div id="round-bg"></div>
@@ -59,9 +62,11 @@
         </div>
     </section>
 
-    <section id="about">
-        <div class="container holder">
-            <div class="title"><h1 class="scroll scroll-right">About Me</h1></div>
+    <section id="about" class="section_wrapper">
+        <div class="container">
+            <div class="title">
+                <h1 class="scroll scroll-right">About Me</h1>
+            </div>
 
             <div class="about-intro scroll scroll-right">
                 <p> 안녕하세요. 새로운 꿈에 첫발을 내딛고자 하는 이소연입니다.<br>
@@ -91,7 +96,7 @@
                 </div>
             </div>
 
-                           
+
             <div class="myability">
                 <div class="skills scroll scroll-right">
                     <div class="text">
@@ -130,153 +135,150 @@
         </div>
     </section>
 
-    <section id="portfolio">
-        <div class="container holder">
-            <div class="title scroll scroll-right">
-           <h1>Portfolio</h1>
-             <p>그동안 열심히 작업해온 결과물입니다<span class="emoji">💻</span></p>
-            </div>
+    <section id="portfolio" class="section_wrapper">
 
-            <div id="slider-container">
-                <ul class="slider-wrap">
-                    <li class="slide">
-                        <div class="text">
-                            <div class="detail">
-                                <h3>TO DO LIST (리액트)</h3>
-                                <p class="duration-info">진행 중 / 개인작업 100%</p>
-                                <div class="guide">
-                                    <div class="keyword">
-                                        <p>Keyword</p>
-                                        <div class="key-box">
-                                            <span>컴포넌트</span>
-                                            <span>상태관리</span>
-                                        </div>
+        <div class="title scroll scroll-right">
+            <h1>Portfolio</h1>
+            <p>그동안 열심히 작업해온 결과물입니다<span class="emoji">💻</span></p>
+        </div>
+
+        <div id="slider-container">
+            <ul class="slider-wrap">
+                <li class="slide">
+                    <div class="text">
+                        <div class="detail">
+                            <h3>TO DO LIST (리액트)</h3>
+                            <p class="duration-info">진행 중 / 개인작업 100%</p>
+                            <div class="guide">
+                                <div class="keyword">
+                                    <p>Keyword</p>
+                                    <div class="key-box">
+                                        <span>컴포넌트</span>
+                                        <span>상태관리</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="button">
-                                <a href="https://todo.ssobility.me" target="_blank">Veiw More</a>
-                            </div>
-                        </div> 
-                        <div class="thumbnail"><img src="images/todolist.png" alt="todolist 썸네일"></div>
-                    </li>
-                    <li class="slide">
-                        <div class="text">
-                            <div class="detail">
-                                <h3>행운의 숫자 (리액트)</h3>
-                                <p class="duration-info">진행 중 / 개인작업 100%</p>
-                                <div class="guide">
-                                    <div class="keyword">
-                                        <p>Keyword</p>
-                                        <div class="key-box">
-                                            <span>컴포넌트</span>
-                                            <span>상태관리</span>
-                                            <span>UX/UI</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="button">
-                                <a href="https://lucky.ssobility.me" target="_blank">Veiw More</a>
-                            </div>
-                        </div> 
-                        <div class="thumbnail"><img src="images/luckynum.png" alt="행운의숫자 썸네일"></div>
-                    </li>
-
-                    <li class="slide">
-                        <div class="text">
-                            <div class="detail">
-                                <h3>메가박스 사이트 제작(클론 코딩)</h3>
-                                <p class="duration-info">작업기간: 2일 (12hr) / 개인작업 100%</p>
-                                <div class="guide">
-                                    <div class="keyword">
-                                        <p>Keyword</p>
-                                        <div class="key-box">
-                                            <span>레이아웃</span>
-                                            <span>피그마</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="button">
-                                <a href="portfolio/megabox/megabox.html" target="_blank">Veiw More</a>
-                            </div>
-                        </div> 
-                        <div class="thumbnail"><img src="images/megabox.png" alt="메가박스 썸네일"></div>
-                    </li>
-
-                    <li class="slide">
-                        <div class="text">
-                            <div class="detail">
-                                <h3>스포티파이 앱 디자인 시안</h3>
-                                <p class="duration-info">작업기간: 1일 (5hr) / 개인작업 100%</p>
-                                <div class="guide">
-                                    <div class="keyword">
-                                        <p>Keyword</p>
-                                    
-                                        <div class="key-box">
-                                            <span>피그마</span>
-                                            <span>리디자인</span>
-                                            <span>레이아웃</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="button">
-                                <a href="portfolio/spotify/spotify.html" target="_blank">Veiw More</a>
-                            </div>
-                        </div> 
-                        <div class="thumbnail"><img src="images/p1.png" alt="스포티파이 썸네일"></div>
-                    </li>
-
-
-
-                    <li class="slide">
-                        <div class="text">
-                            <div class="detail">
-                                <h3>어드민 회원조회 페이지 (진행중) </h3>
-                                <p class="duration-info">작업기간: 진행중 / 개인작업 100%</p>
-                                <div class="guide">
-                                    <div class="keyword">
-                                        <p>Keyword</p>
-                                    
-                                        <div class="key-box">
-                                            <span>회원관리</span>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="button">
-                                <a href="portfolio/admin/index.html" target="_blank">Veiw More</a>
-                            </div>
-                        </div> 
-                        <div class="thumbnail"><img src="images/admin.jpg" alt="어드민페이지 썸네일"></div>
-                    </li>
-                </ul>
-
-                <div class="pagenation">
-                    <button class="swiper-button-prev">
-                        <i class="fa-solid fa-chevron-left"></i>
-                    </button>
-                    <div class="swiper-pagination">
-                        <span class="swiper-pagination-current">1</span>
-                        /
-                        <span class="swiper-pagination-total">3</span>
+                        </div>
+                        <div class="button">
+                            <a href="https://todo.ssobility.me" target="_blank">Veiw More</a>
+                        </div>
                     </div>
-                    <button class="swiper-button-next">
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </button>
+                    <div class="thumbnail"><img src="images/todolist.png" alt="todolist 썸네일"></div>
+                </li>
+                <li class="slide">
+                    <div class="text">
+                        <div class="detail">
+                            <h3>행운의 숫자 (리액트)</h3>
+                            <p class="duration-info">진행 중 / 개인작업 100%</p>
+                            <div class="guide">
+                                <div class="keyword">
+                                    <p>Keyword</p>
+                                    <div class="key-box">
+                                        <span>컴포넌트</span>
+                                        <span>상태관리</span>
+                                        <span>UX/UI</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button">
+                            <a href="https://lucky.ssobility.me" target="_blank">Veiw More</a>
+                        </div>
+                    </div>
+                    <div class="thumbnail"><img src="images/luckynum.png" alt="행운의숫자 썸네일"></div>
+                </li>
+
+                <li class="slide">
+                    <div class="text">
+                        <div class="detail">
+                            <h3>메가박스 사이트 제작(클론 코딩)</h3>
+                            <p class="duration-info">작업기간: 2일 (12hr) / 개인작업 100%</p>
+                            <div class="guide">
+                                <div class="keyword">
+                                    <p>Keyword</p>
+                                    <div class="key-box">
+                                        <span>레이아웃</span>
+                                        <span>피그마</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button">
+                            <a href="portfolio/megabox/megabox.html" target="_blank">Veiw More</a>
+                        </div>
+                    </div>
+                    <div class="thumbnail"><img src="images/megabox.png" alt="메가박스 썸네일"></div>
+                </li>
+
+                <li class="slide">
+                    <div class="text">
+                        <div class="detail">
+                            <h3>스포티파이 앱 디자인 시안</h3>
+                            <p class="duration-info">작업기간: 1일 (5hr) / 개인작업 100%</p>
+                            <div class="guide">
+                                <div class="keyword">
+                                    <p>Keyword</p>
+
+                                    <div class="key-box">
+                                        <span>피그마</span>
+                                        <span>리디자인</span>
+                                        <span>레이아웃</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button">
+                            <a href="portfolio/spotify/spotify.html" target="_blank">Veiw More</a>
+                        </div>
+                    </div>
+                    <div class="thumbnail"><img src="images/p1.png" alt="스포티파이 썸네일"></div>
+                </li>
 
 
 
+                <li class="slide">
+                    <div class="text">
+                        <div class="detail">
+                            <h3>어드민 회원조회 페이지 (진행중) </h3>
+                            <p class="duration-info">작업기간: 진행중 / 개인작업 100%</p>
+                            <div class="guide">
+                                <div class="keyword">
+                                    <p>Keyword</p>
+
+                                    <div class="key-box">
+                                        <span>회원관리</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button">
+                            <a href="portfolio/admin/index.html" target="_blank">Veiw More</a>
+                        </div>
+                    </div>
+                    <div class="thumbnail"><img src="images/admin.jpg" alt="어드민페이지 썸네일"></div>
+                </li>
+            </ul>
+
+            <div class="pagenation">
+                <button class="swiper-button-prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <div class="swiper-pagination">
+                    <span class="swiper-pagination-current">1</span>
+                    /
+                    <span class="swiper-pagination-total">3</span>
                 </div>
+                <button class="swiper-button-next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
             </div>
         </div>
+
     </section>
 
-    <section id="contact">
-        <div class="container holder scroll scroll-right">
+    <section id="contact" class="section_wrapper">
+        <div class="container scroll scroll-right">
             <div class="title">
                 <h1>Contact</h1>
                 <p>LET'S TALK <span class="emoji">👋🏻</span></p>
@@ -296,23 +298,25 @@
                     </div>
 
                     <div class="col">
-                        <span  class="bold">Site</span>
+                        <span class="bold">Site</span>
                         <span>https://github.com/ssowem</span>
                     </div>
                 </div>
 
                 <div class="btn-row">
                     <a href="#" class="btn">message<i class="fa-solid fa-paper-plane"></i></a>
-                    <a href="https://github.com/ssowem" target="_blank" class="btn">github<i class="fa-brands fa-github"></i></a>
+                    <a href="https://github.com/ssowem" target="_blank" class="btn">github<i
+                            class="fa-brands fa-github"></i></a>
                 </div>
 
                 <div>
                     <p class="notice">
-                        <span class="notice-icon">💡</span>현재 이 페이지는 제작 중인 개인 포트폴리오 사이트 입니다. 완성도를 위해 꾸준히 업데이트 하고 있습니다! </p>
+                        <span class="notice-icon">💡</span>현재 이 페이지는 제작 중인 개인 포트폴리오 사이트 입니다. 완성도를 위해 꾸준히 업데이트 하고 있습니다!
+                    </p>
                 </div>
             </div>
 
-            
+
 
         </div>
     </section>

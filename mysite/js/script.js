@@ -143,22 +143,21 @@ function handleTouchEnd() {
 
   //왼쪽으로 이동한거리가 설정값보다 컸을때 next()호출
   if (distance > threshold) {
-    console.log("next()호출")
     next()
   }
 
   //오른쪽으로 이동한거리가 설정값보다 작을때(즉,-50보다 작을때) prev()호출
   else if (distance < -threshold) {
-    console.log("prev()호출")
     prev();
   }
 }
 
 // { passive: false }는 ios에서 e.preventDefault()작동되게함 (페이지스크롤방지)
 function initTouchEvents() {
-  slideWrap.addEventListener('touchstart', handleTouchStart, false);
-  slideWrap.addEventListener('touchmove', handleTouchMove, { passive: false });
-  slideWrap.addEventListener('touchend', handleTouchEnd, false);
+  const slideContainer = document.getElementById("slider-container");
+  slideContainer.addEventListener('touchstart', handleTouchStart, false);
+  slideContainer.addEventListener('touchmove', handleTouchMove, { passive: false });
+  slideContainer.addEventListener('touchend', handleTouchEnd, false);
 }
 
 function init() {
