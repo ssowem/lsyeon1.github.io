@@ -829,36 +829,37 @@
     background-color: #ededed ;
 }
 
-#footer #footer-top {
+#footer .footer-top {
     display: flex;
     justify-content: space-between;
     padding-bottom: 20px;
 }
 
-#footer #footer-top .nav {
+#footer .footer-top .nav {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-#footer #footer-top .search {
+#footer .footer-top .search {
     display: inline-block;
     padding: 6px 18px;
     border: 1px solid #bfbfbf;
     border-radius: 20px;
     color: #989898;
+    font-size: 16px;
 }
 
-#footer #footer-top .search i {
-    margin-left: 10px;
+#footer .footer-top .search i {
+    color:#989898;
 }
 
-#footer #footer-bottom {
+#footer .footer-bottom {
     display: flex;
     justify-content: space-between;
 }
 
-#footer #footer-bottom .sns-icon a {
+#footer .footer-bottom .sns-icon a {
     display: inline-block;
     text-align: center;
     padding: 4px;
