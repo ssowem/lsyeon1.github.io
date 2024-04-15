@@ -7,22 +7,12 @@
     <meta name="description" content="메가박스 사이트 따라하면서 배우는 튜토리얼">
     <meta name="keywords" content="메가박스,유튜브,영화,최신영화,영화관,CGV,롯데시네마">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/swiper.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="icons/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="96x96" href="icons/favicon_96.png">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="icons/favicon_144.png">
     <link rel="apple-touch-icon-precomposed" sizes="192x192" href="icons/favicon_192.png">
-    <!-- 카톡 메타태그 -->
-
-    <!-- 웹폰트 -->
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&amp;subset=korean" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/7be7a8a9f7.js" crossorigin="anonymous"></script>
     <title>MEGABOX</title>
 </head>
 <body>
@@ -207,9 +197,6 @@
                 </div>
 
                 <div class="section1">
-                    <!-- <div class="slider-banner">
-                        <img src="./assets/img/kb.png" alt="">
-                    </div> -->
                     <div class="inner">
                         <div class="left">
                             <div class="top">
@@ -502,71 +489,6 @@
             </div>
         </div>
     </section>
-
-    <script src="assets/js/jquery.min_1.12.4.js"></script>
-    <script src="assets/js/modernizr-custom.js"></script>
-    <script src="assets/js/ie-checker.js"></script>
-    <script src="assets/js/swiper.min.js"></script>
-
-    <script>
-        var mySwiper = new Swiper('.swiper-container', {
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                type: 'bullets',
-            },
-            autoplay: {
-                delay: 5000,
-            },
-        });
-        //영화차트 이미지 슬라이드
-        var mySwiper = new Swiper('.swiper-container2', {
-            slidesPerView: 4,
-            spaceBetween: 24,
-//            mousewheel: {
-//                invert: true,
-//            },
-            keyboard: {
-                enabled: true,
-                onlyInViewport: false,
-            },
-//            autoplay: {
-//                delay: 6000,
-//            },
-            breakpoints: {
-                600: {
-                    slidesPerView: 1.4,
-                    spaceBetween: 24
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 24
-                },
-                960: {
-                    slidesPerView: 3,
-                    spaceBetween: 24
-                }
-            }
-        });
-
-        // 영화차트 탭 메뉴
-        let moveBtn = $('.movie_title > ul > li')
-        let moveCont = $('.movie_chart > div')
-
-        moveCont.hide().eq(0).show();
-        moveBtn.click(function(e){
-            e.preventDefault() // 앵커태그의 기본기능을 해제시켜라
-            let target = $(this)
-            let index = target.index()
-            moveBtn.removeClass('active')
-            target.addClass('active')
-            moveCont.css('diplay',"none")
-            moveCont.eq(index).css('diplay','block')
-        })
-    </script>
 
     
 </body>
