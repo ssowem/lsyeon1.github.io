@@ -418,7 +418,6 @@ a:hover {
     font-size: 1.6rem;
     font-weight: 600;
     padding: 1rem 2rem;
-    text-transform: uppercase;
 }
 
 
@@ -517,31 +516,6 @@ a:hover {
     font-family: 'Montserrat';
 }
 
-.contact-wrap .btn-row {
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
-}
-
-.contact-wrap .btn-row a {
-    display: inline-block;
-    width: 15.7rem;
-    height: 5rem;
-    font-size: 1.6rem;
-    line-height: 5rem;
-    text-align: center;
-    color: #007662;
-    border-radius: 1rem;
-    background-color: #e0e0e0;
-    font-family: 'Outfit', sans-serif;
-    text-transform: uppercase;
-    box-shadow: 0.4rem 0.4rem 0.3rem 0.1rem rgba(0,0,0,0.15);
-}
-
-.btn-row .btn i {
-    margin-left: 1rem;
-    font-size: 1.8rem;
-}
 
 .notice {
     margin-top: 2rem;
