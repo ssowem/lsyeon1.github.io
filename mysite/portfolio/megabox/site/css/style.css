@@ -111,7 +111,7 @@
 .movie_title .movie-more a { color: #fff; margin-right: 2px;}
 .movie_title .movie-more i { color: #fff;}
 .movie_chart {overflow: hidden; }
-.chart-item {display: inline-block; width: 292px; margin-right: 23px; }
+.chart-item {display: inline-block; width: 292px; }
 .movie_chart > div > div > div:last-child {margin-right: 0;}
 .movie_chart > div > div > div .poster {position: relative; }
 .movie_chart > div > div > div .poster img {display: block; border-radius: 4px;}
@@ -174,7 +174,9 @@
 
 .chart-container {
     display: flex;
-    
+    gap: 20px;
+    justify-content: space-between;
+
 }
 
 .search-link {
